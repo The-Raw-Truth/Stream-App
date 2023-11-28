@@ -1,4 +1,6 @@
+import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,10 +27,19 @@ class HomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CircleAvatar(
-                      child: Text("P"),
+                    GestureDetector(
+                      onTap: () {
+                        GoRouter.of(context)
+                            .pushReplacementNamed(AppRoutes.profle);
+                      },
+                      child: CircleAvatar(
+                        child: Text("P"),
+                      ),
                     ),
-                    Icon(Icons.search,color: Colors.white,)
+                    Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    )
                   ],
                 ),
                 SizedBox(
@@ -96,7 +107,7 @@ class HomePage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   height: 200,
                   child: ListView.separated(
-                    scrollDirection: Axis.horizontal,
+                      scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Column(
                           children: [

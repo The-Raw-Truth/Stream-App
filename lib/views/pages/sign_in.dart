@@ -176,10 +176,10 @@ class SignIn extends StatelessWidget {
                         style: TextStyle(color: ColorLib.kPrimary),
                       ),
                     ),
-                    SizedBox(
-                      height: 20,
-                    )
                   ],
+                ),
+                SizedBox(
+                  height: 20,
                 )
               ],
             ),
