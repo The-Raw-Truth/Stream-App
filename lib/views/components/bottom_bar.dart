@@ -1,5 +1,6 @@
 import 'package:app/utils/color_lib.dart';
 import 'package:app/views/pages/home_page.dart';
+import 'package:app/views/pages/movies_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -8,9 +9,7 @@ enum Menus { home, movies, streams, more }
 
 final pages = [
   HomePage(),
-  Center(
-    child: Text("garage"),
-  ),
+  MoviesPage(),
   Center(
     child: Text("garage"),
   ),
