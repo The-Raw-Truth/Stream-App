@@ -52,7 +52,8 @@ class AppPages {
         pageBuilder: (context, state) => const MaterialPage(
           child: ProfilePage(),
         ),
-      )
+      ),
+      
     ],
   );
 }

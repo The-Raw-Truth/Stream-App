@@ -5,6 +5,7 @@ class AppRoutes {
   static const String signup = "signup";
   static const String postsingle = "post_single";
   static const String profle = "profile";
+  
 
   static const String home = "home";
 }
