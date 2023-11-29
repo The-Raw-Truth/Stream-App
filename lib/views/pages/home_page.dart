@@ -129,7 +129,7 @@ class HomePage extends StatelessWidget {
                           width: 10,
                         );
                       },
-                      itemCount: 5))
+                      itemCount: 10))
             ],
           )
         ],

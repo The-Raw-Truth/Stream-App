@@ -21,7 +21,7 @@ class _StreamscreenState extends State<Streamscreen> {
             Positioned.fill(
               child: Image.asset(
                 'assets/images/basketball_player.png',
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               ),
             ),
             Column(
@@ -29,40 +29,24 @@ class _StreamscreenState extends State<Streamscreen> {
                 const SizedBox(
                   height: 50,
                 ),
-                SizedBox(
-                  height: 30,
-                  width: 300,
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(
-                        height: 80,
-                        width: 80,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.amber,
-                          child: Center(
-                            child: Text(
-                              'P',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const Text(
-                        'Profile',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                      const Spacer(),
-                      IconButton(
-                        onPressed: () {
-                          GoRouter.of(context).pushNamed(AppRoutes.search);
+                      GestureDetector(
+                        onTap: () {
+                          GoRouter.of(context)
+                              .pushReplacementNamed(AppRoutes.profle);
                         },
-                        icon: const Icon(
-                          Icons.search,
-                          color: Colors.white,
-                          size: 40,
+                        child: CircleAvatar(
+                          child: Text("P"),
                         ),
                       ),
+                      Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      )
                     ],
                   ),
                 ),
