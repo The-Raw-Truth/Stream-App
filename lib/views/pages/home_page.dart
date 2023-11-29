@@ -32,13 +32,18 @@ class HomePage extends StatelessWidget {
                         GoRouter.of(context)
                             .pushReplacementNamed(AppRoutes.profle);
                       },
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         child: Text("P"),
                       ),
                     ),
-                    Icon(
-                      Icons.search,
-                      color: Colors.white,
+                    IconButton(
+                      onPressed: () {
+                        GoRouter.of(context).pushNamed(AppRoutes.search);
+                      },
+                      icon: const Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      ),
                     )
                   ],
                 ),

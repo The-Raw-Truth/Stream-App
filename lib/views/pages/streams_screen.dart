@@ -1,6 +1,8 @@
 import 'package:app/data/dummy_data_live.dart';
+import 'package:app/routes/app_routes.dart';
 import 'package:app/views/components/custom_live_container.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Streamscreen extends StatefulWidget {
   const Streamscreen({super.key});
@@ -52,7 +54,9 @@ class _StreamscreenState extends State<Streamscreen> {
                       ),
                       const Spacer(),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          GoRouter.of(context).pushNamed(AppRoutes.search);
+                        },
                         icon: const Icon(
                           Icons.search,
                           color: Colors.white,

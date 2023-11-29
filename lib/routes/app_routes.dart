@@ -5,7 +5,8 @@ class AppRoutes {
   static const String signup = "signup";
   static const String postsingle = "post_single";
   static const String profle = "profile";
-  
-
+  static const String search = "search";
+  static const String settings = "settings";
+  static const String appPreferences = "appPreference";
   static const String home = "home";
 }

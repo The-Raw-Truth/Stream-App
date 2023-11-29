@@ -1,5 +1,7 @@
 import 'package:app/data/dummy_data_movies.dart';
+import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Series extends StatefulWidget {
   const Series({super.key});
@@ -52,7 +54,9 @@ class _SeriesState extends State<Series> {
                       ),
                       const Spacer(),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          GoRouter.of(context).pushNamed(AppRoutes.search);
+                        },
                         icon: const Icon(
                           Icons.search,
                           color: Colors.white,
