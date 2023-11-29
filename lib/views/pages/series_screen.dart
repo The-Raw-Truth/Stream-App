@@ -24,14 +24,13 @@ class _SeriesState extends State<Series> {
               ),
             ),
             Container(
-             
               child: Column(
                 children: [
                   const SizedBox(
                     height: 50,
                   ),
                   Container(
-                     padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

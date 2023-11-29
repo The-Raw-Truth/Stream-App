@@ -1,4 +1,6 @@
+import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -27,25 +29,27 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 70,
                   width: 70,
                   child: CircleAvatar(
                     backgroundColor: Colors.amber,
-                    child: Text("P",
-                        style: TextStyle(color: Colors.white, fontSize: 23)),
+                    child: Text(
+                      "P",
+                      style: TextStyle(color: Colors.white, fontSize: 23),
+                    ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text("Profile",
+                const Text("Profile",
                     style: TextStyle(
                       color: Colors.white,
                     ))
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -53,22 +57,25 @@ class ProfilePage extends StatelessWidget {
               child: Column(
                 children: [
                   ListTile(
-                    leading: Icon(
-                      Icons.settings,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      "Settings",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded,
-                        color: Colors.white),
-                  ),
-                  SizedBox(
+                      leading: const Icon(
+                        Icons.settings,
+                        color: Colors.white,
+                      ),
+                      title: const Text(
+                        "Settings",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      trailing: IconButton(
+                        onPressed: () {
+                          GoRouter.of(context).pushNamed(AppRoutes.settings);
+                        },
+                        icon: const Icon(Icons.arrow_forward_ios_rounded,
+                            color: Colors.white),
+                      )),
+                  const SizedBox(
                     height: 20,
                   ),
-
-                  ListTile(
+                  const ListTile(
                     leading: Icon(
                       Icons.person,
                       color: Colors.white,
@@ -77,9 +84,8 @@ class ProfilePage extends StatelessWidget {
                       "My Account",
                       style: TextStyle(color: Colors.white),
                     ),
-                  
                   ),
-                    SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   ListTile(
@@ -91,9 +97,8 @@ class ProfilePage extends StatelessWidget {
                       "Help",
                       style: TextStyle(color: Colors.white),
                     ),
-                   
                   ),
-                    SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   ListTile(
@@ -105,12 +110,11 @@ class ProfilePage extends StatelessWidget {
                       "Privacy Policy and Cookies",
                       style: TextStyle(color: Colors.white),
                     ),
-                   
                   ),
-                    SizedBox(
+                  SizedBox(
                     height: 30,
                   ),
-                   ListTile(
+                  ListTile(
                     leading: Icon(
                       Icons.logout,
                       color: Colors.white,
@@ -119,7 +123,6 @@ class ProfilePage extends StatelessWidget {
                       "Sign Out",
                       style: TextStyle(color: Colors.white),
                     ),
-                   
                   ),
                 ],
               ),
