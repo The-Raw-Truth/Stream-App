@@ -1,6 +1,8 @@
 import 'package:app/data/dummy_data_live.dart';
+import 'package:app/routes/app_routes.dart';
 import 'package:app/views/components/custom_live_container.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Streamscreen extends StatefulWidget {
   const Streamscreen({super.key});
@@ -19,7 +21,7 @@ class _StreamscreenState extends State<Streamscreen> {
             Positioned.fill(
               child: Image.asset(
                 'assets/images/basketball_player.png',
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               ),
             ),
             Column(
@@ -27,38 +29,24 @@ class _StreamscreenState extends State<Streamscreen> {
                 const SizedBox(
                   height: 50,
                 ),
-                SizedBox(
-                  height: 30,
-                  width: 300,
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(
-                        height: 80,
-                        width: 80,
+                      GestureDetector(
+                        onTap: () {
+                          GoRouter.of(context)
+                              .pushReplacementNamed(AppRoutes.profle);
+                        },
                         child: CircleAvatar(
-                          backgroundColor: Colors.amber,
-                          child: Center(
-                            child: Text(
-                              'P',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            ),
-                          ),
+                          child: Text("P"),
                         ),
                       ),
-                      const Text(
-                        'Profile',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                      const Spacer(),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.search,
-                          color: Colors.white,
-                          size: 40,
-                        ),
-                      ),
+                      Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      )
                     ],
                   ),
                 ),
