@@ -9,29 +9,32 @@ class HomePage extends StatelessWidget {
       child: ListView(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             height: 600,
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("assets/images/Quell 2 Movie Poster 2.png"),
                   fit: BoxFit.cover),
             ),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CircleAvatar(
                       child: Text("P"),
                     ),
-                    Icon(Icons.search,color: Colors.white,)
+                    Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 200,
                 ),
                 Center(
@@ -45,7 +48,7 @@ class HomePage extends StatelessWidget {
                         ),
                         height: 50,
                         width: 300,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Watch trailer",
                             style: TextStyle(
@@ -54,7 +57,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Container(
@@ -64,7 +67,7 @@ class HomePage extends StatelessWidget {
                         ),
                         height: 50,
                         width: 300,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Show More",
                             style: TextStyle(
@@ -79,24 +82,24 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Recommended for you",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   height: 200,
                   child: ListView.separated(
-                    scrollDirection: Axis.horizontal,
+                      scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Column(
                           children: [
@@ -109,7 +112,7 @@ class HomePage extends StatelessWidget {
                         );
                       },
                       separatorBuilder: (context, index) {
-                        return SizedBox(
+                        return const SizedBox(
                           width: 10,
                         );
                       },

@@ -1,20 +1,18 @@
 import 'package:app/utils/color_lib.dart';
 import 'package:app/views/pages/home_page.dart';
+import 'package:app/views/pages/series_screen.dart';
+import 'package:app/views/pages/streams_screen.dart';
 import 'package:flutter/material.dart';
-
-
 
 enum Menus { home, movies, streams, more }
 
 final pages = [
-  HomePage(),
-  Center(
-    child: Text("garage"),
-  ),
-  Center(
-    child: Text("garage"),
-  ),
-  Center(
+  const HomePage(),
+  //series
+  const Series(),
+  //streams
+  const Streamscreen(),
+  const Center(
     child: Text("profile"),
   )
 ];
@@ -28,7 +26,7 @@ class BottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
-      child: Container(
+      child: SizedBox(
         height: 80,
         child: Stack(
           children: [
