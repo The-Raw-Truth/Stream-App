@@ -167,15 +167,19 @@ class SignIn extends StatelessWidget {
                   children: [
                     Text("New to Raw ?  "),
                     GestureDetector(
-                        onTap: () {
-                          GoRouter.of(context)
-                              .pushReplacementNamed(AppRoutes.signup);
-                        },
-                        child: Text(
-                          "Create Account",
-                          style: TextStyle(color: ColorLib.kPrimary),
-                        )),
+                      onTap: () {
+                        GoRouter.of(context)
+                            .pushReplacementNamed(AppRoutes.signup);
+                      },
+                      child: Text(
+                        "Create Account",
+                        style: TextStyle(color: ColorLib.kPrimary),
+                      ),
+                    ),
                   ],
+                ),
+                SizedBox(
+                  height: 20,
                 )
               ],
             ),

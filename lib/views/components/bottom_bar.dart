@@ -1,18 +1,31 @@
 import 'package:app/utils/color_lib.dart';
 import 'package:app/views/pages/home_page.dart';
+<<<<<<< HEAD
 import 'package:app/views/pages/series_screen.dart';
 import 'package:app/views/pages/streams_screen.dart';
+=======
+import 'package:app/views/pages/movies_page.dart';
+>>>>>>> cbccb46925fd230252aabe52a977252dadb69e08
 import 'package:flutter/material.dart';
 
 enum Menus { home, movies, streams, more }
 
 final pages = [
+<<<<<<< HEAD
   const HomePage(),
   //series
   const Series(),
   //streams
   const Streamscreen(),
   const Center(
+=======
+  HomePage(),
+  MoviesPage(),
+  Center(
+    child: Text("garage"),
+  ),
+  Center(
+>>>>>>> cbccb46925fd230252aabe52a977252dadb69e08
     child: Text("profile"),
   )
 ];

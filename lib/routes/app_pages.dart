@@ -1,6 +1,7 @@
 import 'package:app/routes/app_routes.dart';
 import 'package:app/views/pages/home_screen.dart';
 import 'package:app/views/pages/onboard.dart';
+import 'package:app/views/pages/profile_page.dart';
 import 'package:app/views/pages/sign_in.dart';
 import 'package:app/views/pages/sign_up.dart';
 import 'package:app/views/pages/splash.dart';
@@ -31,18 +32,25 @@ class AppPages {
           child: SignIn(),
         ),
       ),
-         GoRoute(
+      GoRoute(
         path: '/${AppRoutes.signup}',
         name: AppRoutes.signup,
         pageBuilder: (context, state) => const MaterialPage(
           child: SignUp(),
         ),
       ),
-             GoRoute(
+      GoRoute(
         path: '/${AppRoutes.home}',
         name: AppRoutes.home,
         pageBuilder: (context, state) => const MaterialPage(
           child: HomeScreen(),
+        ),
+      ),
+       GoRoute(
+        path: '/${AppRoutes.profle}',
+        name: AppRoutes.profle,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: ProfilePage(),
         ),
       )
     ],

@@ -1,4 +1,6 @@
+import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,11 +24,17 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CircleAvatar(
-                      child: Text("P"),
+                    GestureDetector(
+                      onTap: () {
+                        GoRouter.of(context)
+                            .pushReplacementNamed(AppRoutes.profle);
+                      },
+                      child: CircleAvatar(
+                        child: Text("P"),
+                      ),
                     ),
                     Icon(
                       Icons.search,
