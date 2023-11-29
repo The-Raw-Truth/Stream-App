@@ -4,15 +4,11 @@ import 'package:app/utils/color_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
-
-
 // OnBoarding content Model
 class OnBoard {
   final String title, description;
 
   OnBoard({
-   
     required this.title,
     required this.description,
   });
@@ -21,22 +17,16 @@ class OnBoard {
 // OnBoarding content list
 final List<OnBoard> demoData = [
   OnBoard(
-    
     title: "Watch everywhere",
-    description:
-        "Stream on your phone, tablet, laptop and TV. ",
+    description: "Stream on your phone, tablet, laptop and TV. ",
   ),
   OnBoard(
-  
     title: "There’s a plan for every fan",
-    description:
-        "Small price. Big entertainment.",
+    description: "Small price. Big entertainment.",
   ),
   OnBoard(
-   
     title: "Cancel online anytime",
-    description:
-        "Join today, no reason to wait.",
+    description: "Join today, no reason to wait.",
   ),
 ];
 
@@ -86,19 +76,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Container(
-        
         padding: const EdgeInsets.symmetric(horizontal: 16),
         // Background gradient
         decoration: const BoxDecoration(color: ColorLib.kPrimary),
         child: Column(
           children: [
-            
             // Carousel area
             Expanded(
               child: PageView.builder(
-                
                 onPageChanged: (index) {
                   setState(() {
                     _pageIndex = index;
@@ -107,11 +93,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 itemCount: demoData.length,
                 controller: _pageController,
                 itemBuilder: (context, index) => OnBoardContent(
-                
-                  
                     title: demoData[index].title,
-                    description: demoData[index].description
-                    ),
+                    description: demoData[index].description),
               ),
             ),
 
@@ -132,8 +115,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ],
               ),
             ),
-           
-          
+
             // White space
             const SizedBox(
               height: 16,
@@ -145,7 +127,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               },
               child: GestureDetector(
                 onTap: () {
-                   GoRouter.of(context).pushReplacementNamed(AppRoutes.signin);
+                  GoRouter.of(context).pushReplacementNamed(AppRoutes.signin);
                 },
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 48),
@@ -176,15 +158,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 }
 
 // OnBoarding area widget
+// ignore: must_be_immutable
 class OnBoardContent extends StatelessWidget {
   OnBoardContent({
     super.key,
-
     required this.title,
     required this.description,
   });
 
-  
   String title;
   String description;
 
@@ -192,11 +173,8 @@ class OnBoardContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-       
         const Spacer(),
-     
         const Spacer(),
-       
         Text(
           title,
           textAlign: TextAlign.center,
@@ -215,7 +193,6 @@ class OnBoardContent extends StatelessWidget {
           style: const TextStyle(
             color: Colors.white,
             fontSize: 14,
-            
           ),
         ),
         Spacer()
@@ -241,7 +218,9 @@ class DotIndicator extends StatelessWidget {
       width: isActive ? 24 : 8,
       decoration: BoxDecoration(
         color: isActive ? Color.fromARGB(255, 210, 200, 0) : Colors.white,
-        border: isActive ? null : Border.all(color: const Color.fromARGB(255, 210, 193, 0)),
+        border: isActive
+            ? null
+            : Border.all(color: const Color.fromARGB(255, 210, 193, 0)),
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
