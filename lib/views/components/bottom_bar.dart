@@ -5,7 +5,7 @@ import 'package:app/views/pages/streams_screen.dart';
 import 'package:app/views/pages/movies_page.dart';
 import 'package:flutter/material.dart';
 
-enum Menus { home, movies, streams, more }
+enum Menus { home, movies, series, streams, more }
 
 final pages = [
   const HomePage(),
@@ -15,9 +15,7 @@ final pages = [
   const Series(),
   //streams
   const Streamscreen(),
-  const Center(
-    child: Text("garage"),
-  ),
+
   const Center(
     child: Text("profile"),
   )
@@ -57,6 +55,17 @@ class BottomBar extends StatelessWidget {
                           ? ColorLib.kPrimary
                           : Colors.black.withOpacity(0.3),
                       Icons.video_call_rounded,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: IconButton(
+                    onPressed: () => onTap(Menus.series),
+                    icon: Icon(
+                      color: currentIndex == Menus.series
+                          ? ColorLib.kPrimary
+                          : Colors.black.withOpacity(0.3),
+                      Icons.video_collection,
                     ),
                   ),
                 ),
