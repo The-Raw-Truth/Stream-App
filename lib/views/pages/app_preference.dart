@@ -111,6 +111,7 @@ class _AppPreferenceState extends State<AppPreference> {
                   activeTrackColor: Colors.amber,
                 ),
               ),
+              
             ],
           ),
         ),

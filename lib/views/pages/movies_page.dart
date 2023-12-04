@@ -1,3 +1,4 @@
+import 'package:app/data/dummy_data_live.dart';
 import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -30,20 +31,21 @@ class MoviesPage extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.profle);
+                            .pushNamed(AppRoutes.profle);
                       },
                       child: const CircleAvatar(
                         child: Text("P"),
                       ),
                     ),
                     IconButton(
-                        onPressed: () {
-                          GoRouter.of(context).pushNamed(AppRoutes.search);
-                        },
-                        icon: const Icon(
-                          Icons.search,
-                          color: Colors.white,
-                        ))
+                      onPressed: () {
+                        GoRouter.of(context).pushNamed(AppRoutes.search);
+                      },
+                      icon: const Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      ),
+                    )
                   ],
                 ),
                 SizedBox(
@@ -95,19 +97,20 @@ class MoviesPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 height: 300,
                 child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    maxCrossAxisExtent: 300,
-                    childAspectRatio: 3 / 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 20,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 5.0, // Add spacing between grid items
+                    mainAxisSpacing: 5.0,
                   ),
-                  itemCount: 7,
+                   itemCount: searchmovies.length,
                   itemBuilder: (BuildContext ctx, index) {
+                     final searchfilm = searchmovies[index];
                     return Column(
                       children: [
                         SizedBox(
-                          height: 100,
-                          child: Image.asset('assets/images/Rectangle 51.png'),
+                          height: 150,
+                          width: 200,
+                          child: searchfilm,
                         )
                       ],
                     );

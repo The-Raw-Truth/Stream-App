@@ -1,3 +1,4 @@
+import 'package:app/data/dummy_data_movies.dart';
 import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.profle);
+                            .pushNamed(AppRoutes.profle);
                       },
                       child: const CircleAvatar(
                         child: Text("P"),
@@ -112,24 +113,25 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   height: 200,
                   child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Column(
-                          children: [
-                            SizedBox(
-                              height: 200,
-                              child:
-                                  Image.asset('assets/images/Rectangle 51.png'),
-                            )
-                          ],
-                        );
-                      },
-                      separatorBuilder: (context, index) {
-                        return const SizedBox(
-                          width: 10,
-                        );
-                      },
-                      itemCount: 10))
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      final film = moviespng[index];
+                      return Column(
+                        children: [
+                          SizedBox(
+                            height: 200,
+                            child: film,
+                          )
+                        ],
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(
+                        width: 10,
+                      );
+                    },
+                    itemCount: moviespng.length,
+                  ))
             ],
           )
         ],

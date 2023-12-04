@@ -116,7 +116,7 @@ class SignUp extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.signin);
+                            .pushReplacementNamed(AppRoutes.subscreen1);
                       },
                       child: Container(
                         margin: const EdgeInsets.only(bottom: 15),

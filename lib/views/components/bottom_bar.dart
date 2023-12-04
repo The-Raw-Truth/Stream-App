@@ -38,6 +38,7 @@ class BottomBar extends StatelessWidget {
               children: [
                 Expanded(
                   child: IconButton(
+                    
                     onPressed: () => onTap(Menus.home),
                     icon: Icon(
                       color: currentIndex == Menus.home

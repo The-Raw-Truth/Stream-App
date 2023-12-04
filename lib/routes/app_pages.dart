@@ -2,6 +2,8 @@ import 'package:app/routes/app_routes.dart';
 import 'package:app/views/pages/app_preference.dart';
 import 'package:app/views/pages/home_screen.dart';
 import 'package:app/views/pages/onboard.dart';
+import 'package:app/views/pages/plan_page_one.dart';
+import 'package:app/views/pages/plan_page_two.dart';
 import 'package:app/views/pages/profile_page.dart';
 import 'package:app/views/pages/search_page.dart';
 import 'package:app/views/pages/settings_page.dart';
@@ -75,6 +77,20 @@ class AppPages {
         name: AppRoutes.appPreferences,
         pageBuilder: (context, state) => const MaterialPage(
           child: AppPreference(),
+        ),
+      ),
+       GoRoute(
+        path: '/${AppRoutes.subscreen1}',
+        name: AppRoutes.subscreen1,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: PlanPage1(),
+        ),
+      ),
+           GoRoute(
+        path: '/${AppRoutes.subscreen2}',
+        name: AppRoutes.subscreen2,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: PlanPage2(),
         ),
       ),
     ],

@@ -8,5 +8,7 @@ class AppRoutes {
   static const String search = "search";
   static const String settings = "settings";
   static const String appPreferences = "appPreference";
+  static const String subscreen1 = "subscreen1";
+  static const String subscreen2 = "subscreen2";
   static const String home = "home";
 }
