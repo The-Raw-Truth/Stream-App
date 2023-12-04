@@ -23,110 +23,44 @@ class PlanPage2 extends StatelessWidget {
                   "assets/images/logo.png",
                 ),
               ),
-              SizedBox(
-                height: 90,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Table(
+                textDirection: TextDirection.ltr,
+                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                border: TableBorder.all(width: 1.5, color: Colors.red),
                 children: [
-                  SizedBox(
-                     height: 70,
-                    width: 70,
-                    child: Image.asset("assets/images/Group 9139.png"),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                "Choose your plan.",
-                style: TextStyle(
-                  color: ColorLib.kPrimary,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 32,
-                ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.check,
+                  TableRow(children: [
+                    Text(
+                      
+                      "Tiers",
+                      textScaleFactor: 1.5,
+                      style: TextStyle(
                         color: ColorLib.kPrimary,
-                        size: 30,
+                        fontSize: 20
                       ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "No commitments, cancel at any\ntime.",
-                          style: TextStyle(
-                            color: ColorLib.kPrimary,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.check,
-                        color: ColorLib.kPrimary,
-                        size: 30,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "Everything on The RAW Truth for\none low price",
-                          style: TextStyle(
-                            color: ColorLib.kPrimary,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.check,
-                        color: ColorLib.kPrimary,
-                        size: 30,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "No adverts and no extra fees.\nEver.",
-                          style: TextStyle(
-                            color: ColorLib.kPrimary,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
-                    ],
-                  )
+                    
+                    ),
+                    Text("Basic", textScaleFactor: 1.5),
+                    Text("Gold", textScaleFactor: 1.5),
+                    Text("Platinum", textScaleFactor: 1.5),
+                  ]),
+                  TableRow(children: [
+                    Text("B.Tech", textScaleFactor: 1.5),
+                    Text("ABESEC", textScaleFactor: 1.5),
+                    Text("AKTU", textScaleFactor: 1.5),
+                     Text("Platinum", textScaleFactor: 1.5),
+                  ]),
+                  TableRow(children: [
+                    Text("12th", textScaleFactor: 1.5),
+                    Text("Delhi Public School", textScaleFactor: 1.5),
+                    Text("CBSE", textScaleFactor: 1.5),
+                     Text("Platinum", textScaleFactor: 1.5),
+                  ]),
+                  TableRow(children: [
+                    Text("High School", textScaleFactor: 1.5),
+                    Text("SFS", textScaleFactor: 1.5),
+                    Text("ICSE", textScaleFactor: 1.5),
+                     Text("Platinum", textScaleFactor: 1.5),
+                  ]),
                 ],
               ),
               SizedBox(
