@@ -43,7 +43,6 @@ class _StreamscreenState extends State<Streamscreen> {
                           child: Text("P"),
                         ),
                       ),
-<<<<<<< HEAD
                       IconButton(
                         onPressed: () {
                           GoRouter.of(context).pushNamed(AppRoutes.search);
@@ -53,12 +52,6 @@ class _StreamscreenState extends State<Streamscreen> {
                           color: Colors.white,
                         ),
                       )
-=======
-                      const Icon(
-                        Icons.search,
-                        color: Colors.white,
-                      ),
->>>>>>> 25c21ea5b78dc7d7a82aadd9e458859f4cd73d1f
                     ],
                   ),
                 ),

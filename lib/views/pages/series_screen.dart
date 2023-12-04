@@ -134,7 +134,7 @@ class _SeriesState extends State<Series> {
                             itemBuilder: (context, index) {
                               final movieindex = moviespng[index];
                               return SizedBox(
-                                height: 150,
+                                height: MediaQuery.of(context).size.height * 0.1,
                                 width: 200,
                                 child: movieindex,
                               );
