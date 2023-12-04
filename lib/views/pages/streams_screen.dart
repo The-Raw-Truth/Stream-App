@@ -1,19 +1,22 @@
-import 'package:app/data/dummy_data_live.dart';
-import 'package:app/routes/app_routes.dart';
-import 'package:app/views/components/custom_live_container.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:app/routes/app_routes.dart';
+import 'package:app/views/components/custom_live_container.dart';
+import 'package:app/data/dummy_data_live.dart';
 
 class Streamscreen extends StatefulWidget {
-  const Streamscreen({super.key});
+  const Streamscreen({Key? key}) : super(key: key);
 
   @override
-  State<Streamscreen> createState() => _StreamscreenState();
+  _StreamscreenState createState() => _StreamscreenState();
 }
 
 class _StreamscreenState extends State<Streamscreen> {
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return SafeArea(
       child: SingleChildScrollView(
         child: Stack(
@@ -26,10 +29,8 @@ class _StreamscreenState extends State<Streamscreen> {
             ),
             Column(
               children: [
-                const SizedBox(
-                  height: 50,
-                ),
-                Container(
+                const SizedBox(height: 50),
+                Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,6 +43,7 @@ class _StreamscreenState extends State<Streamscreen> {
                           child: Text("P"),
                         ),
                       ),
+<<<<<<< HEAD
                       IconButton(
                         onPressed: () {
                           GoRouter.of(context).pushNamed(AppRoutes.search);
@@ -51,13 +53,16 @@ class _StreamscreenState extends State<Streamscreen> {
                           color: Colors.white,
                         ),
                       )
+=======
+                      const Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      ),
+>>>>>>> 25c21ea5b78dc7d7a82aadd9e458859f4cd73d1f
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 300,
-                ),
-                //date
+                const SizedBox(height: 300),
                 Padding(
                   padding: const EdgeInsets.only(right: 180),
                   child: SizedBox(
@@ -73,92 +78,94 @@ class _StreamscreenState extends State<Streamscreen> {
                         child: Text(
                           'Sat, 11 Nov',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15),
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-                //containers with red bg
                 Container(
-                  height: 300,
+                  height: screenHeight,
                   width: double.infinity,
                   color: const Color.fromARGB(93, 255, 17, 0),
                   child: Column(
                     children: [
                       const Text(
-                        'Highligts of the match between\n'
+                        'Highlights of the match between\n'
                         'South Africa and Jamaica which\n'
                         'took place at the Christchurch arena',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
+                      const SizedBox(height: 10),
                       Stack(
                         children: [
-                          Column(
-                            children: [
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Container(
-                                color: Colors.red,
-                                height: 213,
-                                width: double.infinity,
-                                child: Column(
-                                  children: [
-                                    const SizedBox(
-                                      height: 40,
-                                    ),
-                                    //who is live row
-                                    Row(
-                                      children: [
-                                        const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Text(
-                                            'Who is LIVE',
-                                            style: TextStyle(
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                const SizedBox(height: 20),
+                                Container(
+                                  color: Colors.red,
+                                  height: screenHeight - 191,
+                                  width: double.infinity,
+                                  child: Column(
+                                    children: [
+                                      const SizedBox(height: 40),
+                                      Row(
+                                        children: [
+                                          const Padding(
+                                            padding: EdgeInsets.all(8.0),
+                                            child: Text(
+                                              'Who is LIVE',
+                                              style: TextStyle(
                                                 fontSize: 20,
                                                 color: Colors.white,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                        const Spacer(),
-                                        TextButton(
-                                          onPressed: () {},
-                                          child: const Text(
-                                            'See all',
-                                            style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color.fromARGB(
-                                                  167, 255, 255, 255),
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    //live display
-                                    SizedBox(
-                                      height: 120,
-                                      width: double.infinity,
-                                      child: ListView.separated(
+                                          const Spacer(),
+                                          TextButton(
+                                            onPressed: () {},
+                                            child: const Text(
+                                              'See all',
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold,
+                                                color: Color.fromARGB(
+                                                  167,
+                                                  255,
+                                                  255,
+                                                  255,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: screenHeight *
+                                            0.2, // Adjust the height based on your needs
+                                        width: double.infinity,
+                                        child: ListView.separated(
+                                          separatorBuilder: (context, index) =>
+                                              const SizedBox(width: 10),
                                           scrollDirection: Axis.horizontal,
                                           itemBuilder: (context, index) {
-                                            final basketballers =
+                                            final basketballer =
                                                 livematch[index];
                                             return SizedBox(
-                                              height: 110,
-                                              width: 200,
+                                              width: screenWidth *
+                                                  0.6, // Adjust the width based on your needs
                                               child: Stack(
                                                 children: [
-                                                  basketballers,
+                                                  basketballer,
                                                   const Positioned(
                                                     left: 5,
                                                     top: 10,
@@ -168,16 +175,14 @@ class _StreamscreenState extends State<Streamscreen> {
                                               ),
                                             );
                                           },
-                                          separatorBuilder: (context, index) =>
-                                              const SizedBox(
-                                                width: 10,
-                                              ),
-                                          itemCount: livematch.length),
-                                    )
-                                  ],
+                                          itemCount: livematch.length,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                           Positioned(
                             left: 50,
@@ -196,8 +201,9 @@ class _StreamscreenState extends State<Streamscreen> {
                                   child: Text(
                                     'Watch now',
                                     style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
