@@ -1,5 +1,6 @@
 import 'package:app/utils/color_lib.dart';
 import 'package:app/views/pages/home_page.dart';
+import 'package:app/views/pages/menu.dart';
 import 'package:app/views/pages/series_screen.dart';
 import 'package:app/views/pages/streams_screen.dart';
 import 'package:app/views/pages/movies_page.dart';
@@ -16,9 +17,7 @@ final pages = [
   //streams
   const Streamscreen(),
 
-  const Center(
-    child: Text("profile"),
-  )
+  const Menuscreen(),
 ];
 
 class BottomBar extends StatelessWidget {
@@ -38,7 +37,6 @@ class BottomBar extends StatelessWidget {
               children: [
                 Expanded(
                   child: IconButton(
-                    
                     onPressed: () => onTap(Menus.home),
                     icon: Icon(
                       color: currentIndex == Menus.home
