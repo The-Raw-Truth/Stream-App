@@ -67,8 +67,10 @@ class _DownloadscreenState extends State<Downloadscreen> {
                         'and Tv shows and watch them\n'
                         'while you\'re offline',
                         style: TextStyle(
-                            fontSize: screenWidth * 0.05,
-                            fontWeight: FontWeight.bold),
+                          fontSize: screenWidth * 0.05,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -80,7 +82,8 @@ class _DownloadscreenState extends State<Downloadscreen> {
                         'Enjoy THE RAW TRUTH while\n'
                         'you\'re travelling or at home\n'
                         'during loadshedding.',
-                        style: TextStyle(fontSize: screenWidth * 0.05),
+                        style: TextStyle(fontSize: screenWidth * 0.05,
+                        color: Colors.white,),
                       ),
                     ),
                   ],
@@ -99,7 +102,7 @@ class _DownloadscreenState extends State<Downloadscreen> {
                         'content for up to 25 days',
                         style: TextStyle(
                             fontSize: screenWidth * 0.05,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold,color: Colors.white,),
                       ),
                     ),
                     SizedBox(
@@ -110,6 +113,7 @@ class _DownloadscreenState extends State<Downloadscreen> {
                       'You can download music',
                       style: TextStyle(
                         fontSize: screenWidth * 0.05,
+                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -128,7 +132,7 @@ class _DownloadscreenState extends State<Downloadscreen> {
                         'effecient storage usage',
                         style: TextStyle(
                             fontSize: screenWidth * 0.05,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold,color: Colors.white,),
                       ),
                     ),
                     SizedBox(
@@ -140,6 +144,7 @@ class _DownloadscreenState extends State<Downloadscreen> {
                         'Across all of your profiles\n'
                         'You can download music',
                         style: TextStyle(
+                          color: Colors.white,
                           fontSize: screenWidth * 0.05,
                         ),
                       ),
