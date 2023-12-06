@@ -36,11 +36,11 @@ class Livecontainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.black,
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
                   '1h 47m left',
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: MediaQuery.of(context).size.width * 0.03,
                       color: Colors.white,
                       fontWeight: FontWeight.bold),
                 ),
