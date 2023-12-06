@@ -30,8 +30,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        GoRouter.of(context)
-                            .pushNamed(AppRoutes.profle);
+                        GoRouter.of(context).pushNamed(AppRoutes.profle);
                       },
                       child: const CircleAvatar(
                         child: Text("P"),

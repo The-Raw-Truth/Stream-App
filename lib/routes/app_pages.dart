@@ -1,6 +1,10 @@
 import 'package:app/routes/app_routes.dart';
 import 'package:app/views/pages/app_preference.dart';
+import 'package:app/views/pages/download_page.dart';
+import 'package:app/views/pages/download_quality.dart';
+import 'package:app/views/pages/download_settings.dart';
 import 'package:app/views/pages/home_screen.dart';
+import 'package:app/views/pages/menu.dart';
 import 'package:app/views/pages/onboard.dart';
 import 'package:app/views/pages/plan_page_one.dart';
 import 'package:app/views/pages/plan_page_two.dart';
@@ -79,18 +83,46 @@ class AppPages {
           child: AppPreference(),
         ),
       ),
-       GoRoute(
+      GoRoute(
         path: '/${AppRoutes.subscreen1}',
         name: AppRoutes.subscreen1,
         pageBuilder: (context, state) => const MaterialPage(
           child: PlanPage1(),
         ),
       ),
-           GoRoute(
+      GoRoute(
         path: '/${AppRoutes.subscreen2}',
         name: AppRoutes.subscreen2,
         pageBuilder: (context, state) => const MaterialPage(
           child: PlanPage2(),
+        ),
+      ),
+      GoRoute(
+        path: '/${AppRoutes.menu}',
+        name: AppRoutes.menu,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: Menuscreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/${AppRoutes.download}',
+        name: AppRoutes.download,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: Downloadscreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/${AppRoutes.downloadsettings}',
+        name: AppRoutes.downloadsettings,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: Downloadsettings(),
+        ),
+      ),
+      GoRoute(
+        path: '/${AppRoutes.downloadQuality}',
+        name: AppRoutes.downloadQuality,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: Downloadquality(),
         ),
       ),
     ],
