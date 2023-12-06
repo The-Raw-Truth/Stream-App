@@ -11,4 +11,8 @@ class AppRoutes {
   static const String subscreen1 = "subscreen1";
   static const String subscreen2 = "subscreen2";
   static const String home = "home";
+  static const String menu = "menu";
+  static const String download = "download";
+  static const String downloadsettings = "download_settings";
+  static const String downloadQuality = "download_quality";
 }
