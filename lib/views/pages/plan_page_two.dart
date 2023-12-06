@@ -23,43 +23,63 @@ class PlanPage2 extends StatelessWidget {
                   "assets/images/logo.png",
                 ),
               ),
+              SizedBox(
+                height: 70,
+              ),
               Table(
                 textDirection: TextDirection.ltr,
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                 border: TableBorder.all(width: 1.5, color: Colors.red),
-                children: [
+                children: const [
                   TableRow(children: [
                     Text(
-                      
                       "Tiers",
                       textScaleFactor: 1.5,
-                      style: TextStyle(
-                        color: ColorLib.kPrimary,
-                        fontSize: 20
-                      ),
-                    
+                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
                     ),
                     Text("Basic", textScaleFactor: 1.5),
                     Text("Gold", textScaleFactor: 1.5),
                     Text("Platinum", textScaleFactor: 1.5),
                   ]),
                   TableRow(children: [
-                    Text("B.Tech", textScaleFactor: 1.5),
-                    Text("ABESEC", textScaleFactor: 1.5),
-                    Text("AKTU", textScaleFactor: 1.5),
-                     Text("Platinum", textScaleFactor: 1.5),
+                    Text(
+                      "Video Stream",
+                      textScaleFactor: 1.5,
+                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
+                    ),
+                    Text("Limited Access", textScaleFactor: 1.5),
+                    Text("Unlimited Access", textScaleFactor: 1.5),
+                    Text("Unlimited Access", textScaleFactor: 1.5),
                   ]),
                   TableRow(children: [
-                    Text("12th", textScaleFactor: 1.5),
-                    Text("Delhi Public School", textScaleFactor: 1.5),
-                    Text("CBSE", textScaleFactor: 1.5),
-                     Text("Platinum", textScaleFactor: 1.5),
+                    Text(
+                      "Live Stream",
+                      textScaleFactor: 1.5,
+                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
+                    ),
+                    Icon(Icons.linear_scale_sharp),
+                    Icon(Icons.check),
+                    Icon(Icons.check),
                   ]),
                   TableRow(children: [
-                    Text("High School", textScaleFactor: 1.5),
-                    Text("SFS", textScaleFactor: 1.5),
-                    Text("ICSE", textScaleFactor: 1.5),
-                     Text("Platinum", textScaleFactor: 1.5),
+                    Text(
+                      "Ads",
+                      textScaleFactor: 1.5,
+                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
+                    ),
+                    Icon(Icons.linear_scale_sharp),
+                    Icon(Icons.check),
+                    Icon(Icons.check),
+                  ]),
+                  TableRow(children: [
+                    Text(
+                      "Price",
+                      textScaleFactor: 1.5,
+                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
+                    ),
+                    Text("Free", textScaleFactor: 1.5),
+                    Text("\$ 1.99", textScaleFactor: 1.5),
+                    Text("\$ 3.99", textScaleFactor: 1.5),
                   ]),
                 ],
               ),
@@ -68,7 +88,7 @@ class PlanPage2 extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  GoRouter.of(context).pushReplacementNamed(AppRoutes.home);
+                  GoRouter.of(context).pushReplacementNamed(AppRoutes.subscreen3);
                 },
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 15),
