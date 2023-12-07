@@ -1,5 +1,6 @@
 import 'package:app/routes/app_routes.dart';
 import 'package:app/utils/color_lib.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -17,10 +18,11 @@ class Menuscreen extends StatelessWidget {
           children: [
             //profile and search button goes here
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20,),
-
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
               child: Padding(
-                padding: const EdgeInsets.only(top:20),
+                padding: const EdgeInsets.only(top: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -59,35 +61,52 @@ class Menuscreen extends StatelessWidget {
                 ),
               ),
             ),
+            //nigga wants icons here
             Padding(
               padding: EdgeInsets.only(left: screenWidth * 0.15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Live',
-                        style: TextStyle(
-                            fontSize: screenWidth * 0.05, color: Colors.white),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: screenHeight * 0.05,
+                        width: screenWidth * 0.09,
+                        child: Image.asset('assets/images/movies_icon.png'),
                       ),
-                    ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Live',
+                          style: TextStyle(
+                              fontSize: screenWidth * 0.05,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextButton(
-                      //takes you to the download screen
-                      onPressed: () {
-                        GoRouter.of(context).pushNamed(AppRoutes.download);
-                      },
-                      child: Text(
-                        'Downloads',
-                        style: TextStyle(
-                            fontSize: screenWidth * 0.05, color: Colors.white),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: screenHeight * 0.05,
+                        width: screenWidth * 0.09,
+                        child: Image.asset('assets/images/downloads_icon.png'),
                       ),
-                    ),
+                      TextButton(
+                        //takes you to the download screen
+                        onPressed: () {
+                          GoRouter.of(context).pushNamed(AppRoutes.download);
+                        },
+                        child: Text(
+                          'Downloads',
+                          style: TextStyle(
+                              fontSize: screenWidth * 0.05,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -154,6 +173,7 @@ class Menuscreen extends StatelessWidget {
                                     fontSize: screenWidth * 0.05,
                                     color: Colors.white),
                               ),
+                              //nigga wants this button to lead to the movies watching scenes
                               IconButton(
                                 onPressed: () {},
                                 icon: const Icon(

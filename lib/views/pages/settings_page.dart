@@ -45,7 +45,9 @@ class Settingscreen extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).pushNamed(AppRoutes.downloadsettings);
+                },
                 icon: const Icon(
                   Icons.keyboard_arrow_right_rounded,
                   color: Colors.white,
