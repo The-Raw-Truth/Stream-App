@@ -40,7 +40,9 @@ class Searchpage extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: SizedBox(
                         height: 50,
                         width: 50,

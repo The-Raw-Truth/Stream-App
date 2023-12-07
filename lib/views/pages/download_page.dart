@@ -40,128 +40,121 @@ class _DownloadscreenState extends State<Downloadscreen> {
           centerTitle: true,
           backgroundColor: ColorLib.kDarkblue,
         ),
-        body: Stack(
-          children: [
-            //the main background should be here
-
-            PageView(
-              controller: _controller,
-              onPageChanged: (index) {
-                setState(() {
-                  onLastpage = (index == 2);
-                });
-              },
-              children: [
-                //the text or pages
-                //first slide /page
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: screenHeight * 0.5,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Download your favourite movie\n'
-                        'and Tv shows and watch them\n'
-                        'while you\'re offline',
-                        style: TextStyle(
-                          fontSize: screenWidth * 0.05,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+        body: SizedBox(
+          height: screenHeight,
+          width: double.infinity,
+          child: Stack(
+            children: [
+              //the main background should be here
+              PageView(
+                controller: _controller,
+                onPageChanged: (index) {
+                  setState(() {
+                    onLastpage = (index == 2);
+                  });
+                },
+                children: [
+                  //the text or pages
+                  //first slide /page
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: screenHeight * 0.3,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Download your favourite movie\n'
+                          'and Tv shows and watch them\n'
+                          'while you\'re offline',
+                          style: TextStyle(
+                            fontSize: screenWidth * 0.05,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: screenHeight * 0.05,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Enjoy THE RAW TRUTH while\n'
-                        'you\'re travelling or at home\n'
-                        'during loadshedding.',
-                        style: TextStyle(fontSize: screenWidth * 0.05,
-                        color: Colors.white,),
+                      SizedBox(
+                        height: screenHeight * 0.05,
                       ),
-                    ),
-                  ],
-                ),
-                //2nd slide/ page
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: screenHeight * 0.5,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Access your downloaded\n'
-                        'content for up to 25 days',
-                        style: TextStyle(
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Enjoy THE RAW TRUTH while\n'
+                          'you\'re travelling or at home\n'
+                          'during loadshedding.',
+                          style: TextStyle(
                             fontSize: screenWidth * 0.05,
-                            fontWeight: FontWeight.bold,color: Colors.white,),
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: screenHeight * 0.05,
-                    ),
-                    Text(
-                      'Across all of your profiles\n'
-                      'You can download music',
-                      style: TextStyle(
-                        fontSize: screenWidth * 0.05,
-                        color: Colors.white,
+                    ],
+                  ),
+                  //2nd slide/ page
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: screenHeight * 0.3,
                       ),
-                    ),
-                  ],
-                ),
-                //the last slide/page
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: screenHeight * 0.5,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Enjoy high picture quality and\n'
-                        'effecient storage usage',
-                        style: TextStyle(
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Access your downloaded\n'
+                          'content for up to 25 days',
+                          style: TextStyle(
                             fontSize: screenWidth * 0.05,
-                            fontWeight: FontWeight.bold,color: Colors.white,),
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: screenHeight * 0.05,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
+                      SizedBox(
+                        height: screenHeight * 0.05,
+                      ),
+                      Text(
                         'Across all of your profiles\n'
                         'You can download music',
                         style: TextStyle(
-                          color: Colors.white,
                           fontSize: screenWidth * 0.05,
+                          color: Colors.white,
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            //the dot indictors
-            Container(
-              alignment: const Alignment(0, 0.75),
-              child: SingleChildScrollView(
+                    ],
+                  ),
+                  //the last slide/page
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: screenHeight * 0.3,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Enjoy high picture quality and\n'
+                          'effecient storage usage',
+                          style: TextStyle(
+                            fontSize: screenWidth * 0.05,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              //the dot indictors
+              Container(
+                alignment: const Alignment(0, 0.75),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: screenHeight * 0.8,
+                      height: screenHeight * 0.6,
                     ),
                     //dot indicator
                     Padding(
@@ -181,7 +174,7 @@ class _DownloadscreenState extends State<Downloadscreen> {
                             children: [
                               SizedBox(
                                 width: screenWidth * 0.7,
-                                height: screenHeight * 0.05,
+                                height: screenHeight * 0.06,
                                 child: MaterialButton(
                                   onPressed: () {},
                                   shape: RoundedRectangleBorder(
@@ -199,12 +192,12 @@ class _DownloadscreenState extends State<Downloadscreen> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: screenHeight * 0.1,
+                              const SizedBox(
+                                height: 10,
                               ),
                               SizedBox(
                                 width: screenWidth * 0.7,
-                                height: screenHeight * 0.05,
+                                height: screenHeight * 0.06,
                                 child: MaterialButton(
                                   onPressed: () {
                                     GoRouter.of(context)
@@ -229,7 +222,7 @@ class _DownloadscreenState extends State<Downloadscreen> {
                           )
                         : SizedBox(
                             width: screenWidth * 0.7,
-                            height: screenHeight * 0.05,
+                            height: screenHeight * 0.06,
                             child: MaterialButton(
                               onPressed: () {
                                 _controller.nextPage(
@@ -248,9 +241,9 @@ class _DownloadscreenState extends State<Downloadscreen> {
                           ),
                   ],
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ));
   }
 }
