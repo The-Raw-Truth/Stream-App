@@ -17,4 +17,5 @@ class AppRoutes {
   static const String download = "download";
   static const String downloadsettings = "download_settings";
   static const String downloadQuality = "download_quality";
+    static const String moviessingle = "moviessingle";
 }

@@ -6,6 +6,7 @@ import 'package:app/views/pages/download_quality.dart';
 import 'package:app/views/pages/download_settings.dart';
 import 'package:app/views/pages/home_screen.dart';
 import 'package:app/views/pages/menu.dart';
+import 'package:app/views/pages/movies_single.dart';
 import 'package:app/views/pages/onboard.dart';
 import 'package:app/views/pages/plan_page3.dart';
 import 'package:app/views/pages/plan_page_one.dart';
@@ -139,6 +140,13 @@ class AppPages {
         name: AppRoutes.downloadQuality,
         pageBuilder: (context, state) => const MaterialPage(
           child: Downloadquality(),
+        ),
+      ),
+       GoRoute(
+        path: '/${AppRoutes.moviessingle}',
+        name: AppRoutes.moviessingle,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: MoviesSingle(),
         ),
       ),
     ],
