@@ -36,57 +36,145 @@ class BottomBar extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: IconButton(
-                    onPressed: () => onTap(Menus.home),
-                    icon: Icon(
-                      color: currentIndex == Menus.home
-                          ? ColorLib.kPrimary
-                          : Colors.black.withOpacity(0.3),
-                      Icons.home_filled,
+                  child: GestureDetector(
+                    onTap: () {
+                      onTap(Menus.home);
+                      // Add code to display or update the label when the button is clicked
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          color: currentIndex == Menus.home
+                              ? ColorLib.kPrimary
+                              : Colors.black.withOpacity(0.3),
+                          Icons.home_filled,
+                        ),
+                        // Add your label here, for example:
+                        Text(
+                          'Home',
+                          style: TextStyle(
+                            color: currentIndex == Menus.home
+                                ? ColorLib.kPrimary
+                                : Colors.black.withOpacity(0.3),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Expanded(
-                  child: IconButton(
-                    onPressed: () => onTap(Menus.movies),
-                    icon: Icon(
-                      color: currentIndex == Menus.movies
-                          ? ColorLib.kPrimary
-                          : Colors.black.withOpacity(0.3),
-                      Icons.video_call_rounded,
+                  Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      onTap(Menus.movies);
+                      // Add code to display or update the label when the button is clicked
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          color: currentIndex == Menus.movies
+                              ? ColorLib.kPrimary
+                              : Colors.black.withOpacity(0.3),
+                            Icons.video_call_rounded,
+                        ),
+                        // Add your label here, for example:
+                        Text(
+                          'Movies',
+                          style: TextStyle(
+                            color: currentIndex == Menus.movies
+                                ? ColorLib.kPrimary
+                                : Colors.black.withOpacity(0.3),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Expanded(
-                  child: IconButton(
-                    onPressed: () => onTap(Menus.series),
-                    icon: Icon(
-                      color: currentIndex == Menus.series
-                          ? ColorLib.kPrimary
-                          : Colors.black.withOpacity(0.3),
-                      Icons.video_collection,
+                  Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      onTap(Menus.series);
+                      // Add code to display or update the label when the button is clicked
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          color: currentIndex == Menus.series
+                              ? ColorLib.kPrimary
+                              : Colors.black.withOpacity(0.3),
+                             Icons.video_collection,
+                        ),
+                        // Add your label here, for example:
+                        Text(
+                          'Series',
+                          style: TextStyle(
+                            color: currentIndex == Menus.series
+                                ? ColorLib.kPrimary
+                                : Colors.black.withOpacity(0.3),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Expanded(
-                  child: IconButton(
-                    onPressed: () => onTap(Menus.streams),
-                    icon: Icon(
-                      color: currentIndex == Menus.streams
-                          ? ColorLib.kPrimary
-                          : Colors.black.withOpacity(0.3),
-                      Icons.live_tv_rounded,
+                  Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      onTap(Menus.streams);
+                      // Add code to display or update the label when the button is clicked
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          color: currentIndex == Menus.streams
+                              ? ColorLib.kPrimary
+                              : Colors.black.withOpacity(0.3),
+                             Icons.video_collection,
+                        ),
+                        // Add your label here, for example:
+                        Text(
+                          'Streams',
+                          style: TextStyle(
+                            color: currentIndex == Menus.streams
+                                ? ColorLib.kPrimary
+                                : Colors.black.withOpacity(0.3),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Expanded(
-                  child: IconButton(
-                    onPressed: () => onTap(Menus.more),
-                    icon: Icon(
-                      color: currentIndex == Menus.more
-                          ? ColorLib.kPrimary
-                          : Colors.black.withOpacity(0.3),
-                      Icons.menu_sharp,
+            
+               
+               
+                 Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      onTap(Menus.more);
+                      // Add code to display or update the label when the button is clicked
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          color: currentIndex == Menus.more
+                              ? ColorLib.kPrimary
+                              : Colors.black.withOpacity(0.3),
+                             Icons.video_collection,
+                        ),
+                        // Add your label here, for example:
+                        Text(
+                          'More',
+                          style: TextStyle(
+                            color: currentIndex == Menus.more
+                                ? ColorLib.kPrimary
+                                : Colors.black.withOpacity(0.3),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

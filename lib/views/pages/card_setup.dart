@@ -53,10 +53,15 @@ class CardSetup extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 50,
-                height: 50,
-                child: Image.asset('assets/images/Group 9140.png',
-                    fit: BoxFit.scaleDown),
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/images/Group 9140 (1).png',
+                    height: 30,
+                  ),
+                ],
               ),
               SizedBox(
                 height: 30,
@@ -127,8 +132,7 @@ class CardSetup extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  GoRouter.of(context)
-                      .pushReplacementNamed(AppRoutes.subscreen2);
+                  
                 },
                 child: Container(
                     margin: const EdgeInsets.only(bottom: 15),
@@ -148,7 +152,7 @@ class CardSetup extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [Text("\$2.99/month"), Text("Platinum")],
                           ),
-                          Text("Change")
+                          Text("Change", style: TextStyle(color: Colors.amber, fontSize: 20, fontWeight: FontWeight.bold),)
                         ],
                       ),
                     )),
@@ -158,8 +162,7 @@ class CardSetup extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  GoRouter.of(context)
-                      .pushReplacementNamed(AppRoutes.home);
+                  GoRouter.of(context).pushReplacementNamed(AppRoutes.home);
                 },
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 15),

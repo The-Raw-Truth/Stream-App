@@ -37,7 +37,7 @@ class _SeriesState extends State<Series> {
                         GestureDetector(
                           onTap: () {
                             GoRouter.of(context)
-                                .pushReplacementNamed(AppRoutes.profle);
+                                .pushNamed(AppRoutes.profle);
                           },
                           child: CircleAvatar(
                             child: Text("P"),

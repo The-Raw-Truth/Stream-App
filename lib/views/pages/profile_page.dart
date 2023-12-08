@@ -18,7 +18,8 @@ class ProfilePage extends StatelessWidget {
             Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  
                   children: [
                     SizedBox(
                       height: 170,
@@ -27,7 +28,18 @@ class ProfilePage extends StatelessWidget {
                         "assets/images/logo.png",
                       ),
                     ),
+                    SizedBox(width: 5,),
+                       SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset(
+                        "assets/images/Group 9141.png",
+                      ),
+                    ),
                   ],
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 const SizedBox(
                   height: 70,
@@ -114,14 +126,19 @@ class ProfilePage extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.logout,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      "Sign Out",
-                      style: TextStyle(color: Colors.white),
+                  GestureDetector(
+                    onTap: () {
+                       GoRouter.of(context).pushNamed(AppRoutes.signin);
+                    },
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.logout,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        "Sign Out",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ],

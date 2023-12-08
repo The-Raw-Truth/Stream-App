@@ -97,7 +97,7 @@ class SignIn extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.home);
+                            .pushNamed(AppRoutes.home);
                       },
                       child: Container(
                         margin: const EdgeInsets.only(bottom: 15),
@@ -129,7 +129,7 @@ class SignIn extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.signin);
+                            .pushNamed(AppRoutes.signin);
                       },
                       child: Container(
                         margin: const EdgeInsets.only(top: 15),
@@ -169,7 +169,7 @@ class SignIn extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.signup);
+                            .pushNamed(AppRoutes.signup);
                       },
                       child: Text(
                         "Create Account",

@@ -24,63 +24,216 @@ class PlanPage2 extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 70,
+                height: 40,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Choose your plan.",
+                    style: TextStyle(
+                        color: ColorLib.kPrimary,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "Here are tiers of our subscription plan",
+                    style: TextStyle(
+                      color: ColorLib.kPrimary,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30,
               ),
               Table(
                 textDirection: TextDirection.ltr,
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                 border: TableBorder.all(width: 1.5, color: Colors.red),
-                children: const [
-                  TableRow(children: [
-                    Text(
-                      "Tiers",
-                      textScaleFactor: 1.5,
-                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
-                    ),
-                    Text("Basic", textScaleFactor: 1.5),
-                    Text("Gold", textScaleFactor: 1.5),
-                    Text("Platinum", textScaleFactor: 1.5),
-                  ]),
-                  TableRow(children: [
-                    Text(
-                      "Video Stream",
-                      textScaleFactor: 1.5,
-                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
-                    ),
-                    Text("Limited Access", textScaleFactor: 1.5),
-                    Text("Unlimited Access", textScaleFactor: 1.5),
-                    Text("Unlimited Access", textScaleFactor: 1.5),
-                  ]),
-                  TableRow(children: [
-                    Text(
-                      "Live Stream",
-                      textScaleFactor: 1.5,
-                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
-                    ),
-                    Icon(Icons.linear_scale_sharp),
-                    Icon(Icons.check),
-                    Icon(Icons.check),
-                  ]),
-                  TableRow(children: [
-                    Text(
-                      "Ads",
-                      textScaleFactor: 1.5,
-                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
-                    ),
-                    Icon(Icons.linear_scale_sharp),
-                    Icon(Icons.check),
-                    Icon(Icons.check),
-                  ]),
-                  TableRow(children: [
-                    Text(
-                      "Price",
-                      textScaleFactor: 1.5,
-                      style: TextStyle(color: ColorLib.kPrimary, fontSize: 20),
-                    ),
-                    Text("Free", textScaleFactor: 1.5),
-                    Text("\$ 1.99", textScaleFactor: 1.5),
-                    Text("\$ 3.99", textScaleFactor: 1.5),
-                  ]),
+                children: [
+                  TableRow(
+                    decoration: BoxDecoration(color: Colors.grey[200]),
+                    children: [
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Tiers",
+                            textScaleFactor: 1.5,
+                            style: TextStyle(
+                              color: ColorLib.kPrimary,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Basic", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Gold", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Platinum", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                        ),
+                      ),
+                    ],
+                  ),
+                  TableRow(
+                    decoration: BoxDecoration(color: Colors.grey[200]),
+                    children: [
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Video Stream",
+                            textScaleFactor: 1.5,
+                            style: TextStyle(
+                              color: ColorLib.kPrimary,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Limited Access", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Unlimited Access", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Unlimited Access", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                        ),
+                      ),
+                    ],
+                  ),
+                  TableRow(
+                    decoration: BoxDecoration(color: Colors.grey[200]),
+                    children: [
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Live Stream",
+                            textScaleFactor: 1.5,
+                            style: TextStyle(
+                              color: ColorLib.kPrimary,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.linear_scale_sharp),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.check),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.check),
+                        ),
+                      ),
+                    ],
+                  ),
+                  TableRow(
+                    decoration: BoxDecoration(color: Colors.grey[200]),
+                    children: [
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Ads",
+                            textScaleFactor: 1.5,
+                            style: TextStyle(
+                              color: ColorLib.kPrimary,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.linear_scale_sharp),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.linear_scale_sharp),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.check),
+                        ),
+                      ),
+                    ],
+                  ),
+                  TableRow(
+                    decoration: BoxDecoration(color: Colors.grey[200]),
+                    children: [
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Price",
+                            textScaleFactor: 1.5,
+                            style: TextStyle(
+                              color: ColorLib.kPrimary,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Free", textScaleFactor: 1.5),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("\$ 1.99", textScaleFactor: 1.5),
+                        ),
+                      ),
+                      TableCell(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("\$ 3.99", textScaleFactor: 1.5),
+                        ),
+                      ),
+                    ],
+                  ),
+                  // ... (Repeat the pattern for other rows)
                 ],
               ),
               SizedBox(
@@ -88,7 +241,7 @@ class PlanPage2 extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  GoRouter.of(context).pushReplacementNamed(AppRoutes.subscreen3);
+                  GoRouter.of(context).pushNamed(AppRoutes.subscreen3);
                 },
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 15),
@@ -115,5 +268,5 @@ class PlanPage2 extends StatelessWidget {
         ),
       ),
     );
-  }
+     }
 }

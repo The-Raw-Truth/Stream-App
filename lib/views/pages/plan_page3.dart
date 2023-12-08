@@ -74,7 +74,7 @@ class PlanPage3 extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   GoRouter.of(context)
-                      .pushReplacementNamed(AppRoutes.cardsetup);
+                      .pushNamed(AppRoutes.cardsetup);
                 },
                 child: Container(
                     margin: const EdgeInsets.only(bottom: 15),

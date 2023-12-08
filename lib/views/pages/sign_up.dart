@@ -116,7 +116,7 @@ class SignUp extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.subscreen1);
+                            .pushNamed(AppRoutes.subscreen1);
                       },
                       child: Container(
                         margin: const EdgeInsets.only(bottom: 15),
@@ -148,7 +148,7 @@ class SignUp extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         GoRouter.of(context)
-                            .pushReplacementNamed(AppRoutes.signin);
+                            .pushNamed(AppRoutes.signin);
                       },
                       child: Container(
                         margin: const EdgeInsets.only(top: 15),
@@ -187,7 +187,7 @@ class SignUp extends StatelessWidget {
                     Text("Already a member? "),
                     GestureDetector(
                       onTap: () {
-                          GoRouter.of(context).pushReplacementNamed(AppRoutes.signin);
+                          GoRouter.of(context).pushNamed(AppRoutes.signin);
                       },
                         child: Text(
                       "Log in",
