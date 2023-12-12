@@ -124,7 +124,7 @@ class Menuscreen extends StatelessWidget {
               padding: EdgeInsets.only(right: screenWidth * 0.5),
               child: TextButton(
                 onPressed: () {
-                    GoRouter.of(context).pushNamed(AppRoutes.waitlist);
+                  GoRouter.of(context).pushNamed(AppRoutes.waitlist);
                 },
                 child: Text(
                   'My Watchlist',
@@ -183,7 +183,9 @@ class Menuscreen extends StatelessWidget {
                               ),
                               //nigga wants this button to lead to the movies watching scenes
                               IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  GoRouter.of(context).push(AppRoutes.downloads);
+                                },
                                 icon: const Icon(
                                   Icons.add_circle_rounded,
                                   color: Colors.white,

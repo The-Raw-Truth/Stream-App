@@ -1,6 +1,7 @@
 import 'package:app/routes/app_routes.dart';
 import 'package:app/views/pages/app_preference.dart';
 import 'package:app/views/pages/card_setup.dart';
+import 'package:app/views/pages/dowloads.dart';
 import 'package:app/views/pages/download_page.dart';
 import 'package:app/views/pages/download_quality.dart';
 import 'package:app/views/pages/download_settings.dart';
@@ -115,7 +116,7 @@ class AppPages {
           child: CardSetup(),
         ),
       ),
-       GoRoute(
+      GoRoute(
         path: '/${AppRoutes.menu}',
         name: AppRoutes.menu,
         pageBuilder: (context, state) => const MaterialPage(
@@ -143,18 +144,25 @@ class AppPages {
           child: Downloadquality(),
         ),
       ),
-       GoRoute(
+      GoRoute(
         path: '/${AppRoutes.moviessingle}',
         name: AppRoutes.moviessingle,
         pageBuilder: (context, state) => const MaterialPage(
           child: MoviesSingle(),
         ),
       ),
-         GoRoute(
+      GoRoute(
         path: '/${AppRoutes.waitlist}',
         name: AppRoutes.waitlist,
         pageBuilder: (context, state) => const MaterialPage(
           child: WaitlistScreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/${AppRoutes.downloads}',
+        name: AppRoutes.downloads,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: DowloadsPage(),
         ),
       ),
     ],
