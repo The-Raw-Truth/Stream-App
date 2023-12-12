@@ -132,7 +132,7 @@ class CardSetup extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  
+                  GoRouter.of(context).pushNamed(AppRoutes.subscreen2);
                 },
                 child: Container(
                     margin: const EdgeInsets.only(bottom: 15),
@@ -152,7 +152,13 @@ class CardSetup extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [Text("\$2.99/month"), Text("Platinum")],
                           ),
-                          Text("Change", style: TextStyle(color: Colors.amber, fontSize: 20, fontWeight: FontWeight.bold),)
+                          Text(
+                            "Change",
+                            style: TextStyle(
+                                color: Colors.amber,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          )
                         ],
                       ),
                     )),

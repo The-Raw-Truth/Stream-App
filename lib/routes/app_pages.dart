@@ -17,6 +17,7 @@ import 'package:app/views/pages/settings_page.dart';
 import 'package:app/views/pages/sign_in.dart';
 import 'package:app/views/pages/sign_up.dart';
 import 'package:app/views/pages/splash.dart';
+import 'package:app/views/pages/waitlist.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -147,6 +148,13 @@ class AppPages {
         name: AppRoutes.moviessingle,
         pageBuilder: (context, state) => const MaterialPage(
           child: MoviesSingle(),
+        ),
+      ),
+         GoRoute(
+        path: '/${AppRoutes.waitlist}',
+        name: AppRoutes.waitlist,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: WaitlistScreen(),
         ),
       ),
     ],

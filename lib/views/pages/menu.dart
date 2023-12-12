@@ -123,7 +123,9 @@ class Menuscreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(right: screenWidth * 0.5),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                    GoRouter.of(context).pushNamed(AppRoutes.waitlist);
+                },
                 child: Text(
                   'My Watchlist',
                   style: TextStyle(
