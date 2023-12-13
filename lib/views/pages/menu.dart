@@ -1,5 +1,6 @@
 import 'package:app/routes/app_routes.dart';
 import 'package:app/utils/color_lib.dart';
+import 'package:app/views/pages/series_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -124,7 +125,11 @@ class Menuscreen extends StatelessWidget {
               padding: EdgeInsets.only(right: screenWidth * 0.5),
               child: TextButton(
                 onPressed: () {
-                  GoRouter.of(context).pushNamed(AppRoutes.waitlist);
+                  Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Series()),
+              );
+                  
                 },
                 child: Text(
                   'My Watchlist',

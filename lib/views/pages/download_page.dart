@@ -176,14 +176,16 @@ class _DownloadscreenState extends State<Downloadscreen> {
                                 width: screenWidth * 0.7,
                                 height: screenHeight * 0.06,
                                 child: MaterialButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    GoRouter.of(context).pushNamed(AppRoutes.downloads);
+                                  },
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   color: Colors.white,
                                   child: Center(
                                     child: Text(
-                                      'Find something to watch',
+                                      'Dowloaded',
                                       style: TextStyle(
                                           fontSize: screenWidth * 0.05,
                                           fontWeight: FontWeight.bold,

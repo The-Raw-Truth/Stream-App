@@ -12,7 +12,9 @@ class HomePage extends StatelessWidget {
       child: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10,),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
             height: 600,
             width: double.infinity,
             decoration: const BoxDecoration(
@@ -75,7 +77,8 @@ class HomePage extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                           GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                          GoRouter.of(context)
+                              .pushNamed(AppRoutes.moviessingle);
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -124,7 +127,8 @@ class HomePage extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                              GoRouter.of(context)
+                                  .pushNamed(AppRoutes.moviessingle);
                             },
                             child: SizedBox(
                               height: 200,
