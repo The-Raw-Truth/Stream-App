@@ -13,14 +13,13 @@ class ProfilePage extends StatelessWidget {
           child: Container(
         height: double.infinity,
         width: double.infinity,
-        color:  ColorLib.kPrimary,
+        color: ColorLib.kPrimary,
         child: ListView(
           children: [
             Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  
                   children: [
                     SizedBox(
                       height: 170,
@@ -29,17 +28,23 @@ class ProfilePage extends StatelessWidget {
                         "assets/images/logo.png",
                       ),
                     ),
-                    SizedBox(width: 5,),
-                       SizedBox(
-                      height: 100,
-                      width: 100,
-                      child: Image.asset(
-                        "assets/images/Group 9141.png",
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    GestureDetector(
+                      onTap: () =>
+                          GoRouter.of(context).pushNamed(AppRoutes.livescreen),
+                      child: SizedBox(
+                        height: 100,
+                        width: 100,
+                        child: Image.asset(
+                          "assets/images/Group 9141.png",
+                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 const SizedBox(
@@ -98,10 +103,10 @@ class ProfilePage extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(
                       Icons.help,
                       color: Colors.white,
@@ -111,10 +116,10 @@ class ProfilePage extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(
                       Icons.bookmark,
                       color: Colors.white,
@@ -124,14 +129,14 @@ class ProfilePage extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   GestureDetector(
                     onTap: () {
-                       GoRouter.of(context).pushNamed(AppRoutes.signin);
+                      GoRouter.of(context).pushNamed(AppRoutes.signin);
                     },
-                    child: ListTile(
+                    child: const ListTile(
                       leading: Icon(
                         Icons.logout,
                         color: Colors.white,

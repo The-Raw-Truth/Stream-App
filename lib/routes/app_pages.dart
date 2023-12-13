@@ -6,6 +6,8 @@ import 'package:app/views/pages/download_page.dart';
 import 'package:app/views/pages/download_quality.dart';
 import 'package:app/views/pages/download_settings.dart';
 import 'package:app/views/pages/home_screen.dart';
+import 'package:app/views/pages/live_screen.dart';
+import 'package:app/views/pages/live_settings.dart';
 import 'package:app/views/pages/menu.dart';
 import 'package:app/views/pages/movies_single.dart';
 import 'package:app/views/pages/onboard.dart';
@@ -163,6 +165,20 @@ class AppPages {
         name: AppRoutes.downloads,
         pageBuilder: (context, state) => const MaterialPage(
           child: DowloadsPage(),
+        ),
+      ),
+      GoRoute(
+        path: '/${AppRoutes.livescreen}',
+        name: AppRoutes.livescreen,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: Livescreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/${AppRoutes.livesettings}',
+        name: AppRoutes.livesettings,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: Livesettings(),
         ),
       ),
     ],

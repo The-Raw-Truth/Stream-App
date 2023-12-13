@@ -20,4 +20,6 @@ class AppRoutes {
   static const String moviessingle = "moviessingle";
   static const String waitlist = "waitlist";
   static const String downloads = "downloads";
+  static const String livescreen = "live_screens";
+  static const String livesettings = "live_settings";
 }

@@ -1,5 +1,4 @@
 import 'package:app/data/dummy_data_live.dart';
-import 'package:app/data/dummy_data_movies.dart';
 import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -16,7 +15,7 @@ class WaitlistScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -24,27 +23,27 @@ class WaitlistScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                     GoRouter.of(context).pop(AppRoutes.menu);
+                    GoRouter.of(context).pop(AppRoutes.menu);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back_ios_new_rounded,
                     color: Colors.white,
                   ),
                 ),
-                Text(
+                const Text(
                   "Waitlist",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 25,
                   ),
                 ),
-                SizedBox()
+                const SizedBox()
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Container(
+            SizedBox(
               height: 750,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -67,7 +66,7 @@ class WaitlistScreen extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             )
           ],

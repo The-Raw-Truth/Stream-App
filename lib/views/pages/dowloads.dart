@@ -1,5 +1,5 @@
 import 'package:app/data/dummy_data_live.dart';
-import 'package:app/data/dummy_data_movies.dart';
+
 import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -16,7 +16,7 @@ class DowloadsPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -26,12 +26,12 @@ class DowloadsPage extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).pop(AppRoutes.menu);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back_ios_new_rounded,
                     color: Colors.white,
                   ),
                 ),
-                Column(
+                const Column(
                   children: [
                     Text(
                       "Downloaded",
@@ -49,13 +49,13 @@ class DowloadsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox()
+                const SizedBox()
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Container(
+            SizedBox(
               height: 750,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -75,10 +75,10 @@ class DowloadsPage extends StatelessWidget {
                             width: 200,
                             child: searchfilm,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
-                          Text(
+                          const Text(
                             "follows the inspiring journey of a determined underdog basketball",
                             style: TextStyle(color: Colors.white),
                           )
@@ -89,7 +89,7 @@ class DowloadsPage extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             )
           ],
