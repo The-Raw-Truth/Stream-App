@@ -116,18 +116,7 @@ class MoviesPage extends StatelessWidget {
                     );
                   },
                 ),
-                // child: ListView.separated(
-                //   scrollDirection: Axis.horizontal,
-                //   itemBuilder: (context, index) {
-
-                //   },
-                //   separatorBuilder: (context, index) {
-                //     return SizedBox(
-                //       width: 10,
-                //     );
-                //   },
-                //   itemCount: 5,
-                // ),
+          
               )
             ],
           )

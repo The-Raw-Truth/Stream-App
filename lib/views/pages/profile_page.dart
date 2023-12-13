@@ -23,13 +23,13 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     SizedBox(
                       height: 170,
-                      width: 170,
+                      width: 150,
                       child: Image.asset(
                         "assets/images/logo.png",
                       ),
                     ),
                     const SizedBox(
-                      width: 5,
+                      width: 20,
                     ),
                     GestureDetector(
                       onTap: () =>

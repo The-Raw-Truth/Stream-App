@@ -1,3 +1,4 @@
+import 'package:app/data/dummy_data_live.dart';
 import 'package:app/data/dummy_data_movies.dart';
 import 'package:app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -36,8 +37,7 @@ class _SeriesState extends State<Series> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            GoRouter.of(context)
-                                .pushNamed(AppRoutes.profle);
+                            GoRouter.of(context).pushNamed(AppRoutes.profle);
                           },
                           child: CircleAvatar(
                             child: Text("P"),
@@ -62,7 +62,9 @@ class _SeriesState extends State<Series> {
                           width: 300,
                           height: 50,
                           child: MaterialButton(
-                            onPressed: () {},
+                            onPressed: () {
+                               GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                            },
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -85,7 +87,9 @@ class _SeriesState extends State<Series> {
                           width: 300,
                           height: 50,
                           child: MaterialButton(
-                            onPressed: () {},
+                            onPressed: () {
+                               GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                            },
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -110,7 +114,7 @@ class _SeriesState extends State<Series> {
                   //series for you
                   Container(
                     width: double.infinity,
-                    height: 400,
+                    height: 600,
                     color: const Color.fromARGB(155, 255, 17, 0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -134,7 +138,8 @@ class _SeriesState extends State<Series> {
                             itemBuilder: (context, index) {
                               final movieindex = moviespng[index];
                               return SizedBox(
-                                height: MediaQuery.of(context).size.height * 0.1,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.1,
                                 width: 200,
                                 child: movieindex,
                               );
@@ -146,6 +151,34 @@ class _SeriesState extends State<Series> {
                             itemCount: moviespng.length,
                           ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 300,
+                          child: GridView.builder(
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing:
+                                  5.0, // Add spacing between grid items
+                              mainAxisSpacing: 5.0,
+                            ),
+                            itemCount: searchmovies.length,
+                            itemBuilder: (BuildContext ctx, index) {
+                              final searchfilm = searchmovies[index];
+                              return Column(
+                                children: [
+                                  SizedBox(
+                                    height: 180,
+                                    width: 230,
+                                    child: searchfilm,
+                                  )
+                                ],
+                              );
+                            },
+                          ),
+                        )
                       ],
                     ),
                   ),

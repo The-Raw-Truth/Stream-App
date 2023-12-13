@@ -31,7 +31,7 @@ class WaitlistScreen extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  "Waitlist",
+                  "Watchlist",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 25,
