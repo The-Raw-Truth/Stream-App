@@ -1,4 +1,5 @@
 import 'package:app/routes/app_routes.dart';
+import 'package:app/utils/color_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,7 +13,7 @@ class ProfilePage extends StatelessWidget {
           child: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.red,
+        color:  ColorLib.kPrimary,
         child: ListView(
           children: [
             Column(

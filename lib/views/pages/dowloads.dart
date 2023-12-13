@@ -71,12 +71,17 @@ class DowloadsPage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                            height: 150,
+                            height: 100,
                             width: 200,
                             child: searchfilm,
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(
-                              "follows the inspiring journey of a determined underdog basketball")
+                            "follows the inspiring journey of a determined underdog basketball",
+                            style: TextStyle(color: Colors.white),
+                          )
                         ],
                       )
                     ],

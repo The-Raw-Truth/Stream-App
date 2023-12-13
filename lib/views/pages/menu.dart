@@ -184,7 +184,7 @@ class Menuscreen extends StatelessWidget {
                               //nigga wants this button to lead to the movies watching scenes
                               IconButton(
                                 onPressed: () {
-                                  GoRouter.of(context).push(AppRoutes.downloads);
+                                  GoRouter.of(context).pushNamed(AppRoutes.downloads);
                                 },
                                 icon: const Icon(
                                   Icons.add_circle_rounded,

@@ -57,34 +57,43 @@ class PlanPage2 extends StatelessWidget {
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
                       TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
+                        child: Container(
+                          color: Color.fromARGB(255, 255, 182, 26), 
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
                             "Tiers",
                             textScaleFactor: 1.5,
                             style: TextStyle(
-                              color: ColorLib.kPrimary,
-                              fontSize: 20,
+                              color: Colors.white,
+                              fontSize: 15,
                             ),
+                          ),
                           ),
                         ),
                       ),
                       TableCell(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Basic", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                          child: Text("Basic",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(fontSize: 12)),
                         ),
                       ),
                       TableCell(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Gold", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                          child: Text("Gold",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(fontSize: 12)),
                         ),
                       ),
                       TableCell(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Platinum", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                          child: Text("Platinum",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(fontSize: 12)),
                         ),
                       ),
                     ],
@@ -92,35 +101,44 @@ class PlanPage2 extends StatelessWidget {
                   TableRow(
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
-                      TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
+                     TableCell(
+                        child: Container(
+                              color: Color.fromARGB(255, 238, 165, 9),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
                             "Video Stream",
                             textScaleFactor: 1.5,
                             style: TextStyle(
-                              color: ColorLib.kPrimary,
+                              color: Colors.white,
                               fontSize: 15,
                             ),
+                          ),
                           ),
                         ),
                       ),
                       TableCell(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Limited Access", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                          child: Text("Limited Access",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(fontSize: 12)),
                         ),
                       ),
                       TableCell(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Unlimited Access", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                          child: Text("Unlimited Access",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(fontSize: 12)),
                         ),
                       ),
                       TableCell(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("Unlimited Access", textScaleFactor: 1.5,style: TextStyle(fontSize: 12)),
+                          child: Text("Unlimited Access",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(fontSize: 12)),
                         ),
                       ),
                     ],
@@ -129,15 +147,18 @@ class PlanPage2 extends StatelessWidget {
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
                       TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
+                        child: Container(
+                          color: Color.fromARGB(255, 255, 182, 26), 
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
                             "Live Stream",
                             textScaleFactor: 1.5,
                             style: TextStyle(
-                              color: ColorLib.kPrimary,
+                              color: Colors.white,
                               fontSize: 15,
                             ),
+                          ),
                           ),
                         ),
                       ),
@@ -164,16 +185,19 @@ class PlanPage2 extends StatelessWidget {
                   TableRow(
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
-                      TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
+                       TableCell(
+                        child: Container(
+                          color: Color.fromARGB(255, 238, 165, 9),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
                             "Ads",
                             textScaleFactor: 1.5,
                             style: TextStyle(
-                              color: ColorLib.kPrimary,
+                              color: Colors.white,
                               fontSize: 15,
                             ),
+                          ),
                           ),
                         ),
                       ),
@@ -200,16 +224,19 @@ class PlanPage2 extends StatelessWidget {
                   TableRow(
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
-                      TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
+                       TableCell(
+                        child: Container(
+                          color: Color.fromARGB(255, 255, 182, 26), 
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
                             "Price",
                             textScaleFactor: 1.5,
                             style: TextStyle(
-                              color: ColorLib.kPrimary,
+                              color: Colors.white,
                               fontSize: 15,
                             ),
+                          ),
                           ),
                         ),
                       ),
@@ -268,5 +295,5 @@ class PlanPage2 extends StatelessWidget {
         ),
       ),
     );
-     }
+  }
 }
