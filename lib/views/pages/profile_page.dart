@@ -29,7 +29,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 40,
                     ),
                     GestureDetector(
                       onTap: () =>
@@ -93,40 +93,49 @@ class ProfilePage extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      "My Account",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.help,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      "Help",
-                      style: TextStyle(color: Colors.white),
+                  GestureDetector(
+                    onTap: () {},
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        "My Account",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.bookmark,
-                      color: Colors.white,
+                  GestureDetector(
+                    onTap: () {},
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.help,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        "Help",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
-                    title: Text(
-                      "Privacy Policy and Cookies",
-                      style: TextStyle(color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.bookmark,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        "Privacy Policy and Cookies",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                   const SizedBox(

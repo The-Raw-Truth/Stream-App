@@ -58,23 +58,23 @@ class PlanPage2 extends StatelessWidget {
                     children: [
                       TableCell(
                         child: Container(
-                          color: Color.fromARGB(255, 255, 182, 26), 
+                          color: Color.fromARGB(255, 255, 182, 26),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(17),
                             child: Text(
-                            "Tiers",
-                            textScaleFactor: 1.5,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
+                              "Tiers",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
-                          ),
                           ),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Text("Basic",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
@@ -82,7 +82,7 @@ class PlanPage2 extends StatelessWidget {
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Text("Gold",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
@@ -90,7 +90,7 @@ class PlanPage2 extends StatelessWidget {
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Text("Platinum",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
@@ -101,25 +101,25 @@ class PlanPage2 extends StatelessWidget {
                   TableRow(
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
-                     TableCell(
+                      TableCell(
                         child: Container(
-                              color: Color.fromARGB(255, 238, 165, 9),
+                          color: Color.fromARGB(255, 238, 165, 9),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(17),
                             child: Text(
-                            "Video Stream",
-                            textScaleFactor: 1.5,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
+                              "Video Stream",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
-                          ),
                           ),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Text("Limited Access",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
@@ -127,7 +127,7 @@ class PlanPage2 extends StatelessWidget {
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Text("Unlimited Access",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
@@ -135,7 +135,7 @@ class PlanPage2 extends StatelessWidget {
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Text("Unlimited Access",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
@@ -148,35 +148,35 @@ class PlanPage2 extends StatelessWidget {
                     children: [
                       TableCell(
                         child: Container(
-                          color: Color.fromARGB(255, 255, 182, 26), 
+                          color: Color.fromARGB(255, 255, 182, 26),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(10),
                             child: Text(
-                            "Live Stream",
-                            textScaleFactor: 1.5,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
+                              "Live Stream",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
-                          ),
                           ),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Icon(Icons.linear_scale_sharp),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Icon(Icons.check),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Icon(Icons.check),
                         ),
                       ),
@@ -185,37 +185,37 @@ class PlanPage2 extends StatelessWidget {
                   TableRow(
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
-                       TableCell(
+                      TableCell(
                         child: Container(
                           color: Color.fromARGB(255, 238, 165, 9),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(10),
                             child: Text(
-                            "Ads",
-                            textScaleFactor: 1.5,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
+                              "Ads",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
                           ),
-                          ),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Icon(Icons.linear_scale_sharp),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Icon(Icons.linear_scale_sharp),
                         ),
                       ),
                       TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10),
                           child: Icon(Icons.check),
                         ),
                       ),
@@ -224,38 +224,47 @@ class PlanPage2 extends StatelessWidget {
                   TableRow(
                     decoration: BoxDecoration(color: Colors.grey[200]),
                     children: [
-                       TableCell(
+                      TableCell(
                         child: Container(
-                          color: Color.fromARGB(255, 255, 182, 26), 
+                          color: Color.fromARGB(255, 255, 182, 26),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(17),
                             child: Text(
-                            "Price",
-                            textScaleFactor: 1.5,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
+                              "Price",
+                              textScaleFactor: 1.5,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
                           ),
+                        ),
+                      ),
+                      TableCell(
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Text("Free", textScaleFactor: 1.5),
                           ),
                         ),
                       ),
                       TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("Free", textScaleFactor: 1.5),
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Text("\$ 1.99", textScaleFactor: 1.5),
+                          ),
                         ),
                       ),
                       TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("\$ 1.99", textScaleFactor: 1.5),
-                        ),
-                      ),
-                      TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("\$ 3.99", textScaleFactor: 1.5),
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Text("\$ 3.99", textScaleFactor: 1.5),
+                          ),
                         ),
                       ),
                     ],

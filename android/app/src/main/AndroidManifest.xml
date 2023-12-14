@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="Raw Truth"
+        android:label="The Raw Truth"
         android:name="${applicationName}"
         android:icon="@mipmap/raw_icon">
         <activity

@@ -56,19 +56,24 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.amber,
-                        ),
-                        height: 50,
-                        width: 300,
-                        child: const Center(
-                          child: Text(
-                            "Watch trailer",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap: () {
+                           GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.amber,
+                          ),
+                          height: 50,
+                          width: 300,
+                          child: const Center(
+                            child: Text(
+                              "Watch trailer",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                       ),

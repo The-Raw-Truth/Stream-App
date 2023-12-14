@@ -185,7 +185,10 @@ class _StreamscreenState extends State<Streamscreen> {
                               height: 50,
                               width: 200,
                               child: MaterialButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  GoRouter.of(context)
+                                      .pushNamed(AppRoutes.moviessingle);
+                                },
                                 color: Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
