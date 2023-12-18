@@ -11,8 +11,8 @@ class MoviesSingle extends StatefulWidget {
 }
 
 class _MoviesSingleState extends State<MoviesSingle> {
-  bool isLike = false;
-  bool isList = false;
+  bool isLike = true;
+  bool isList = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,8 +124,12 @@ class _MoviesSingleState extends State<MoviesSingle> {
                       },
                       icon:isLike ? Icon(Icons.favorite_border, color: Colors.white) : Icon(Icons.favorite_rounded, color: Colors.white,),
                     ),
+                    isLike ?
                     Text(
                       "Like",
+                      style: TextStyle(color: Colors.white),
+                    ) :  Text(
+                      "Liked",
                       style: TextStyle(color: Colors.white),
                     )
                   ],
