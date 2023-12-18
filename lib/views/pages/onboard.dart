@@ -28,6 +28,10 @@ final List<OnBoard> demoData = [
     title: "Cancel online anytime",
     description: "Join today, no reason to wait.",
   ),
+    OnBoard(
+    title: "How do I watch?",
+    description: "Members that subscribed to The RAW Truth can watch here in the app.",
+  ),
 ];
 
 // OnBoardingScreen

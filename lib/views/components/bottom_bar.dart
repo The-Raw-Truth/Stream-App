@@ -48,12 +48,13 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.home
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                          Icons.home_filled,
+                          Icons.home_filled,size: 25,
                         ),
                         // Add your label here, for example:
                         Text(
                           'Home',
                           style: TextStyle(
+                            fontSize: 12,
                             color: currentIndex == Menus.home
                                 ? ColorLib.kPrimary
                                 : Colors.black.withOpacity(0.3),
@@ -76,12 +77,13 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.movies
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                            Icons.video_call_rounded,
+                            Icons.video_call_rounded,size: 25,
                         ),
                         // Add your label here, for example:
                         Text(
                           'Movies',
                           style: TextStyle(
+                            fontSize: 12,
                             color: currentIndex == Menus.movies
                                 ? ColorLib.kPrimary
                                 : Colors.black.withOpacity(0.3),
@@ -104,12 +106,13 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.series
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                             Icons.video_collection,
+                             Icons.video_collection,size: 25,
                         ),
                         // Add your label here, for example:
                         Text(
                           'Series',
                           style: TextStyle(
+                            fontSize: 12,
                             color: currentIndex == Menus.series
                                 ? ColorLib.kPrimary
                                 : Colors.black.withOpacity(0.3),
@@ -132,12 +135,13 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.streams
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                             Icons.live_tv_rounded,
+                             Icons.live_tv_rounded,size: 25,
                         ),
                         // Add your label here, for example:
                         Text(
                           'Streams',
                           style: TextStyle(
+                            fontSize: 12,
                             color: currentIndex == Menus.streams
                                 ? ColorLib.kPrimary
                                 : Colors.black.withOpacity(0.3),
@@ -163,12 +167,13 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.more
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                             Icons.menu,
+                             Icons.menu,size: 25,
                         ),
                         // Add your label here, for example:
                         Text(
                           'More',
                           style: TextStyle(
+                            fontSize: 12,
                             color: currentIndex == Menus.more
                                 ? ColorLib.kPrimary
                                 : Colors.black.withOpacity(0.3),

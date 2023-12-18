@@ -3,9 +3,16 @@ import 'package:app/utils/color_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class MoviesSingle extends StatelessWidget {
+class MoviesSingle extends StatefulWidget {
   const MoviesSingle({super.key});
 
+  @override
+  State<MoviesSingle> createState() => _MoviesSingleState();
+}
+
+class _MoviesSingleState extends State<MoviesSingle> {
+  bool isLike = false;
+  bool isList = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,8 +117,12 @@ class MoviesSingle extends StatelessWidget {
                 Column(
                   children: [
                     IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.favorite_border, color: Colors.white),
+                      onPressed: () {
+                        setState(() {
+                          isLike = !isLike;
+                        });
+                      },
+                      icon:isLike ? Icon(Icons.favorite_border, color: Colors.white) : Icon(Icons.favorite_rounded, color: Colors.white,),
                     ),
                     Text(
                       "Like",
@@ -122,8 +133,12 @@ class MoviesSingle extends StatelessWidget {
                 Column(
                   children: [
                     IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.add, color: Colors.white),
+                      onPressed: () {
+                        setState(() {
+                          isList = !isList;
+                        });
+                      },
+                      icon: isList ?  Icon(Icons.add, color: Colors.white): Icon(Icons.check, color: Colors.white,),
                     ),
                     Text(
                       "List",
