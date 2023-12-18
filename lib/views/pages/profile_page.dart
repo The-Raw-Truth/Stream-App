@@ -110,7 +110,9 @@ class ProfilePage extends StatelessWidget {
                     height: 20,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      GoRouter.of(context).pushNamed(AppRoutes.helpcenter);
+                    },
                     child: const ListTile(
                       leading: Icon(
                         Icons.help,

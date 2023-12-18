@@ -17,4 +17,4 @@ final List moviespng = [
   Image.asset('assets/images/365 days.png'),
 ];
 
-final List categories = ['Action', 'Drama', 'Sport', 'Uncut', 'Live'];
+final List categories = ['Action', 'Drama', 'Sport', 'Uncut', 'Live', 'Broadcast'];

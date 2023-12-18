@@ -22,4 +22,5 @@ class AppRoutes {
   static const String downloads = "downloads";
   static const String livescreen = "live_screens";
   static const String livesettings = "live_settings";
+  static const String helpcenter = "helpcenter";
 }

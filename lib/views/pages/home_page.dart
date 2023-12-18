@@ -58,7 +58,8 @@ class HomePage extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                           GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                          GoRouter.of(context)
+                              .pushNamed(AppRoutes.moviessingle);
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -86,19 +87,32 @@ class HomePage extends StatelessWidget {
                               .pushNamed(AppRoutes.moviessingle);
                         },
                         child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.white,
                           ),
                           height: 50,
                           width: 300,
-                          child: const Center(
-                            child: Text(
-                              "Show More",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: Colors.amber
+                                ),
+                                child: Center(child: Icon(Icons.arrow_forward)),
                               ),
-                            ),
+                              Text(
+                                "Show More",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       )

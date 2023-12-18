@@ -63,7 +63,8 @@ class _SeriesState extends State<Series> {
                           height: 50,
                           child: MaterialButton(
                             onPressed: () {
-                               GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                              GoRouter.of(context)
+                                  .pushNamed(AppRoutes.moviessingle);
                             },
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
@@ -88,7 +89,8 @@ class _SeriesState extends State<Series> {
                           height: 50,
                           child: MaterialButton(
                             onPressed: () {
-                               GoRouter.of(context).pushNamed(AppRoutes.moviessingle);
+                              GoRouter.of(context)
+                                  .pushNamed(AppRoutes.moviessingle);
                             },
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
@@ -155,7 +157,7 @@ class _SeriesState extends State<Series> {
                           height: 10,
                         ),
                         Container(
-                          height: 300,
+                          height: 350,
                           child: GridView.builder(
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(

@@ -81,7 +81,7 @@ class Menuscreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                            GoRouter.of(context).pushNamed(AppRoutes.livescreen);
+                          GoRouter.of(context).pushNamed(AppRoutes.livescreen);
                         },
                         child: Text(
                           'Live',
@@ -127,11 +127,7 @@ class Menuscreen extends StatelessWidget {
               padding: EdgeInsets.only(right: screenWidth * 0.5),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Series()),
-              );
-                  
+                 GoRouter.of(context).pushNamed(AppRoutes.waitlist);
                 },
                 child: Text(
                   'My Watchlist',
@@ -191,7 +187,11 @@ class Menuscreen extends StatelessWidget {
                               //nigga wants this button to lead to the movies watching scenes
                               IconButton(
                                 onPressed: () {
-                                  GoRouter.of(context).pushNamed(AppRoutes.waitlist);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const Series()));
                                 },
                                 icon: const Icon(
                                   Icons.add_circle_rounded,
@@ -205,7 +205,7 @@ class Menuscreen extends StatelessWidget {
                               Text(
                                 'button to add any',
                                 style: TextStyle(
-                                  fontSize: screenWidth * 0.05,
+                                    fontSize: screenWidth * 0.05,
                                     color: Colors.white),
                               ),
                             ],

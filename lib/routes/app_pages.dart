@@ -5,6 +5,7 @@ import 'package:app/views/pages/dowloads.dart';
 import 'package:app/views/pages/download_page.dart';
 import 'package:app/views/pages/download_quality.dart';
 import 'package:app/views/pages/download_settings.dart';
+import 'package:app/views/pages/help_center.dart';
 import 'package:app/views/pages/home_screen.dart';
 import 'package:app/views/pages/live_screen.dart';
 import 'package:app/views/pages/live_settings.dart';
@@ -179,6 +180,13 @@ class AppPages {
         name: AppRoutes.livesettings,
         pageBuilder: (context, state) => const MaterialPage(
           child: Livesettings(),
+        ),
+      ),
+          GoRoute(
+        path: '/${AppRoutes.helpcenter}',
+        name: AppRoutes.helpcenter,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: ChatCenter(),
         ),
       ),
     ],

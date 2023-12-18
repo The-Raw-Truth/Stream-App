@@ -177,34 +177,6 @@ class _StreamscreenState extends State<Streamscreen> {
                               ],
                             ),
                           ),
-                          Positioned(
-                            left: 50,
-                            right: 50,
-                            top: 0,
-                            child: SizedBox(
-                              height: 50,
-                              width: 200,
-                              child: MaterialButton(
-                                onPressed: () {
-                                  GoRouter.of(context)
-                                      .pushNamed(AppRoutes.moviessingle);
-                                },
-                                color: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: const Center(
-                                  child: Text(
-                                    'Watch now',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
                         ],
                       ),
                     ],

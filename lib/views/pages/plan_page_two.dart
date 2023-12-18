@@ -3,8 +3,17 @@ import 'package:app/utils/color_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class PlanPage2 extends StatelessWidget {
+class PlanPage2 extends StatefulWidget {
   const PlanPage2({super.key});
+
+  @override
+  State<PlanPage2> createState() => _PlanPage2State();
+}
+
+class _PlanPage2State extends State<PlanPage2> {
+  bool isBasics = false;
+  bool isGold = false;
+  bool isPlantanium = false;
 
   @override
   Widget build(BuildContext context) {
@@ -105,7 +114,7 @@ class PlanPage2 extends StatelessWidget {
                         child: Container(
                           color: Color.fromARGB(255, 238, 165, 9),
                           child: Padding(
-                            padding: const EdgeInsets.all(17),
+                            padding: const EdgeInsets.all(15),
                             child: Text(
                               "Video Stream",
                               textScaleFactor: 1.5,
@@ -228,7 +237,7 @@ class PlanPage2 extends StatelessWidget {
                         child: Container(
                           color: Color.fromARGB(255, 255, 182, 26),
                           child: Padding(
-                            padding: const EdgeInsets.all(17),
+                            padding: const EdgeInsets.all(15),
                             child: Text(
                               "Price",
                               textScaleFactor: 1.5,
@@ -242,28 +251,45 @@ class PlanPage2 extends StatelessWidget {
                       ),
                       TableCell(
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            setState(() {
+                              isBasics = !isBasics;
+                            });
+                          },
+                          child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: isBasics
+                                  ? Icon(Icons.check)
+                                  : Text("Free", textScaleFactor: 1.5)),
+                        ),
+                      ),
+                      TableCell(
+                        child: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isGold = !isGold;
+                            });
+                          },
                           child: Padding(
                             padding: const EdgeInsets.all(10),
-                            child: Text("Free", textScaleFactor: 1.5),
+                            child: isGold
+                                ? Icon(Icons.check)
+                                : Text("\$ 1.99", textScaleFactor: 1.5),
                           ),
                         ),
                       ),
                       TableCell(
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            setState(() {
+                              isPlantanium = !isPlantanium;
+                            });
+                          },
                           child: Padding(
                             padding: const EdgeInsets.all(10),
-                            child: Text("\$ 1.99", textScaleFactor: 1.5),
-                          ),
-                        ),
-                      ),
-                      TableCell(
-                        child: GestureDetector(
-                          onTap: () {},
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Text("\$ 3.99", textScaleFactor: 1.5),
+                            child: isPlantanium
+                                ? Icon(Icons.check)
+                                : Text("\$ 3.99", textScaleFactor: 1.5),
                           ),
                         ),
                       ),
