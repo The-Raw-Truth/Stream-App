@@ -43,9 +43,14 @@ class _SeriesState extends State<Series> {
                             child: Text("P"),
                           ),
                         ),
-                        Icon(
-                          Icons.search,
-                          color: Colors.white,
+                        IconButton(
+                          onPressed: () {
+                            GoRouter.of(context).pushNamed(AppRoutes.search);
+                          },
+                          icon: const Icon(
+                            Icons.search,
+                            color: Colors.white,
+                          ),
                         )
                       ],
                     ),
