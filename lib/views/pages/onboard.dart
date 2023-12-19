@@ -28,9 +28,10 @@ final List<OnBoard> demoData = [
     title: "Cancel online anytime",
     description: "Join today, no reason to wait.",
   ),
-    OnBoard(
+  OnBoard(
     title: "How do I watch?",
-    description: "Members that subscribed to The RAW Truth can watch here in the app.",
+    description:
+        "Members that subscribed to The RAW Truth can watch here in the app.",
   ),
 ];
 
@@ -83,7 +84,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         // Background gradient
-        decoration: const BoxDecoration(color: ColorLib.kPrimary),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(
+              "assets/images/Group 512213.png",
+            ),
+          ),
+        ),
         child: Column(
           children: [
             // Carousel area
@@ -138,7 +146,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   height: 60,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: ColorLib.kBlack,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(
@@ -146,7 +154,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       "Get Started",
                       style: TextStyle(
                         fontFamily: "HappyMonkey",
-                        color: Colors.white,
+                        color: ColorLib.kBlack,
                         fontSize: 18,
                       ),
                     ),

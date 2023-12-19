@@ -32,10 +32,10 @@ class _PlanPage2State extends State<PlanPage2> {
                   "assets/images/logo.png",
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -54,7 +54,7 @@ class _PlanPage2State extends State<PlanPage2> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Table(
@@ -68,8 +68,8 @@ class _PlanPage2State extends State<PlanPage2> {
                       TableCell(
                         child: Container(
                           color: Color.fromARGB(255, 255, 182, 26),
-                          child: Padding(
-                            padding: const EdgeInsets.all(17),
+                          child: const Padding(
+                            padding: EdgeInsets.all(17),
                             child: Text(
                               "Tiers",
                               textScaleFactor: 1.5,
@@ -81,28 +81,34 @@ class _PlanPage2State extends State<PlanPage2> {
                           ),
                         ),
                       ),
-                      TableCell(
+                      const TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: Text("Basic",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(fontSize: 12)),
+                          padding: EdgeInsets.all(10),
+                          child: Center(
+                            child: Text("Basic",
+                                textScaleFactor: 1.5,
+                                style: TextStyle(fontSize: 12)),
+                          ),
                         ),
                       ),
-                      TableCell(
+                      const TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: Text("Gold",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(fontSize: 12)),
+                          padding: EdgeInsets.all(10),
+                          child: Center(
+                            child: Text("Gold",
+                                textScaleFactor: 1.5,
+                                style: TextStyle(fontSize: 12)),
+                          ),
                         ),
                       ),
-                      TableCell(
+                      const TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: Text("Platinum",
-                              textScaleFactor: 1.5,
-                              style: TextStyle(fontSize: 12)),
+                          padding: EdgeInsets.all(10),
+                          child: Center(
+                            child: Text("Platinum",
+                                textScaleFactor: 1.5,
+                                style: TextStyle(fontSize: 12)),
+                          ),
                         ),
                       ),
                     ],
@@ -113,30 +119,30 @@ class _PlanPage2State extends State<PlanPage2> {
                       TableCell(
                         child: Container(
                           color: Color.fromARGB(255, 238, 165, 9),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15),
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
                             child: Text(
-                              "Video Stream",
+                              "Video\nStream",
                               textScaleFactor: 1.5,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 15,
+                                fontSize: 13,
                               ),
                             ),
                           ),
                         ),
                       ),
-                      TableCell(
+                      const TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           child: Text("Limited Access",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
                         ),
                       ),
-                      TableCell(
+                      const TableCell(
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           child: Text("Unlimited Access",
                               textScaleFactor: 1.5,
                               style: TextStyle(fontSize: 12)),
@@ -161,11 +167,11 @@ class _PlanPage2State extends State<PlanPage2> {
                           child: Padding(
                             padding: const EdgeInsets.all(10),
                             child: Text(
-                              "Live Stream",
+                              "Live\nStream",
                               textScaleFactor: 1.5,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 15,
+                                fontSize: 13,
                               ),
                             ),
                           ),
@@ -256,11 +262,13 @@ class _PlanPage2State extends State<PlanPage2> {
                               isBasics = !isBasics;
                             });
                           },
-                          child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: isBasics
-                                  ? Icon(Icons.check)
-                                  : Text("Free", textScaleFactor: 1.5)),
+                          child: Center(
+                            child: Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: isBasics
+                                    ? Icon(Icons.check)
+                                    : Text("Free", textScaleFactor: 1.5)),
+                          ),
                         ),
                       ),
                       TableCell(
@@ -270,11 +278,13 @@ class _PlanPage2State extends State<PlanPage2> {
                               isGold = !isGold;
                             });
                           },
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: isGold
-                                ? Icon(Icons.check)
-                                : Text("\$ 1.99", textScaleFactor: 1.5),
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: isGold
+                                  ? Icon(Icons.check)
+                                  : Text("\$ 1.99", textScaleFactor: 1.5),
+                            ),
                           ),
                         ),
                       ),
@@ -285,11 +295,13 @@ class _PlanPage2State extends State<PlanPage2> {
                               isPlantanium = !isPlantanium;
                             });
                           },
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: isPlantanium
-                                ? Icon(Icons.check)
-                                : Text("\$ 3.99", textScaleFactor: 1.5),
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: isPlantanium
+                                  ? Icon(Icons.check)
+                                  : Text("\$ 3.99", textScaleFactor: 1.5),
+                            ),
                           ),
                         ),
                       ),
@@ -303,6 +315,7 @@ class _PlanPage2State extends State<PlanPage2> {
               ),
               GestureDetector(
                 onTap: () {
+                  setState(() {});
                   GoRouter.of(context).pushNamed(AppRoutes.subscreen3);
                 },
                 child: Container(

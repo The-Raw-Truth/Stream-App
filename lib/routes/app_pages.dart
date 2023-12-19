@@ -17,6 +17,7 @@ import 'package:app/views/pages/plan_page_one.dart';
 import 'package:app/views/pages/plan_page_two.dart';
 import 'package:app/views/pages/profile_page.dart';
 import 'package:app/views/pages/search_page.dart';
+import 'package:app/views/pages/series_screen.dart';
 import 'package:app/views/pages/settings_page.dart';
 import 'package:app/views/pages/sign_in.dart';
 import 'package:app/views/pages/sign_up.dart';
@@ -187,6 +188,13 @@ class AppPages {
         name: AppRoutes.helpcenter,
         pageBuilder: (context, state) => const MaterialPage(
           child: ChatCenter(),
+        ),
+      ),
+           GoRoute(
+        path: '/${AppRoutes.series}',
+        name: AppRoutes.series,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: Series(),
         ),
       ),
     ],
