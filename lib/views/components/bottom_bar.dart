@@ -77,7 +77,7 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.movies
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                            Icons.video_call_rounded,size: 30,
+                            Icons.videocam,size: 30,
                         ),
                         // Add your label here, for example:
                         Text(
@@ -106,7 +106,7 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.series
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                             Icons.video_collection,size: 25,
+                             Icons.video_collection,size: 26,
                         ),
                         // Add your label here, for example:
                         Text(
@@ -135,7 +135,7 @@ class BottomBar extends StatelessWidget {
                           color: currentIndex == Menus.streams
                               ? ColorLib.kPrimary
                               : Colors.black.withOpacity(0.3),
-                             Icons.live_tv_rounded,size: 25,
+                             Icons.live_tv_rounded,size: 30,
                         ),
                         // Add your label here, for example:
                         Text(
