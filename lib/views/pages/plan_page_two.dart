@@ -11,6 +11,7 @@ class PlanPage2 extends StatefulWidget {
 }
 
 class _PlanPage2State extends State<PlanPage2> {
+  Color buttonColor = Color.fromARGB(155, 141, 134, 134);
   bool isBasics = false;
   bool isGold = false;
   bool isPlantanium = false;
@@ -260,7 +261,13 @@ class _PlanPage2State extends State<PlanPage2> {
                           onTap: () {
                             setState(() {
                               isBasics = !isBasics;
+                              buttonColor = isBasics
+                                  ? ColorLib.kBlack
+                                  : Color.fromARGB(155, 141, 134, 134);
                             });
+                            if (isBasics || isGold || isPlantanium) {
+                               Icon(Icons.check);
+                            }
                           },
                           child: Center(
                             child: Padding(
@@ -276,7 +283,14 @@ class _PlanPage2State extends State<PlanPage2> {
                           onTap: () {
                             setState(() {
                               isGold = !isGold;
+
+                              buttonColor = isGold
+                                  ? ColorLib.kBlack
+                                  : Color.fromARGB(155, 141, 134, 134);
                             });
+                            if (isBasics || isGold || isPlantanium) {
+                               Icon(Icons.check);
+                            }
                           },
                           child: Center(
                             child: Padding(
@@ -293,7 +307,13 @@ class _PlanPage2State extends State<PlanPage2> {
                           onTap: () {
                             setState(() {
                               isPlantanium = !isPlantanium;
+                              buttonColor = isPlantanium
+                                  ? ColorLib.kBlack
+                                  : Color.fromARGB(155, 141, 134, 134);
                             });
+                            if (isBasics || isGold || isPlantanium) {
+                              Icon(Icons.check);
+                            }
                           },
                           child: Center(
                             child: Padding(
@@ -315,15 +335,16 @@ class _PlanPage2State extends State<PlanPage2> {
               ),
               GestureDetector(
                 onTap: () {
-                  setState(() {});
-                  GoRouter.of(context).pushNamed(AppRoutes.subscreen3);
+                  if (isBasics || isGold || isPlantanium) {
+                    GoRouter.of(context).pushNamed(AppRoutes.subscreen3);
+                  }
                 },
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 15),
                   height: 60,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 14, 9, 9),
+                    color: buttonColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(
